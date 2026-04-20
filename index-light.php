@@ -1,25 +1,146 @@
 <?php
 $lightMode = true;
 $customLightLogo = 'assets/images/abatilia/logo (3) negro.png';
+$minimalFooter = true;
 include './layout/layoutTop.php'
 ?>
 
 <style>
+    :root {
+        --abt-primary: #315f4b;
+        --abt-accent: #a34a52;
+        --abt-overlay: rgba(0, 0, 0, 0.28);
+    }
+
     .hero-area h1, .hero-area-2 h1, .about-area h2, .about-area-2 h1, .service-area h2, .service-area-2 h2, .homeproject-area h2, .interior-area h2, .timeline-area h2, .reviews-area h2, .cta-area h2, .faq-area h2,
     .service-area h6, .service-area-2 h5, .homeproject-area h4, .interior-area h4, .timeline-area .title, .faq-area h5 {
         font-family: "IvyOraDisplay-Bold", "Times New Roman", serif;
+        font-weight: 600;
     }
-    body, p, span, a, li, input, button, .category-line, .sub-title {
+
+    body, p, span, a, li, input, button, textarea, label, .category-line, .sub-title {
         font-family: "HelveticaNeueLTStdRoman", "Helvetica", Arial, sans-serif;
     }
+
     .primary-bg, .theme-btn, .primary-readmore, .carousel-buttons button:hover, .carousel-buttons button:focus {
-        background-color: #9f111b !important;
-        border-color: #9f111b !important;
+        background-color: var(--abt-primary) !important;
+        border-color: var(--abt-primary) !important;
     }
-    .theme-btn, .primary-readmore, .category-line, .sub-title { color: #9f111b; }
-    .reviews-area .fa-star, .timeline-area .icon::before, .right-arrow i { color: #9f111b !important; }
-    .timeline-area .icon { border-color: #1d5b3a !important; }
-    .main-header .logo img { max-height: 58px; width: auto; }
+
+    .theme-btn, .theme-btn:hover, .theme-btn:focus,
+    .primary-readmore, .primary-readmore:hover, .primary-readmore:focus {
+        color: #fff !important;
+    }
+
+    .category-line, .sub-title, .tab-style-one .nav-link.active { color: var(--abt-accent); }
+    .reviews-area .fa-star, .timeline-area .icon::before, .right-arrow i { color: var(--abt-accent) !important; }
+    .timeline-area .icon, .faq-area .accordion-button:not(.collapsed)::after { border-color: var(--abt-primary) !important; }
+
+    .main-header .header-upper .container { max-width: 1240px; }
+    .main-header .header-inner { min-height: 86px; padding: 8px 0; }
+    .main-header .logo img { max-height: 50px; width: auto; }
+
+    .hero-area-2 .hero-2-item {
+        min-height: 760px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .about-area-2 .about-media img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .service-area-2 .item > a,
+    .service-area-2 .item > a img {
+        display: block;
+        width: 100%;
+    }
+
+    .service-area-2 .item > a img {
+        height: 340px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .reviews-area {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .reviews-area::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--abt-overlay);
+    }
+
+    .reviews-area > .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .cta-area .right img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .cta-area .right .pt-96 img {
+        height: 360px;
+        object-position: center 30%;
+    }
+
+    .cta-form .field-group {
+        margin-bottom: 20px;
+    }
+
+    .cta-form label {
+        display: block;
+        margin-bottom: 8px;
+        color: #ffffff;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+    }
+
+    .cta-form input,
+    .cta-form textarea {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        color: #fff;
+        padding: 14px 16px;
+    }
+
+    .cta-form textarea {
+        min-height: 132px;
+        resize: vertical;
+    }
+
+    .faq-area .image img {
+        width: 100%;
+        height: 580px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    @media (max-width: 991px) {
+        .main-header .header-inner { min-height: 74px; }
+        .hero-area-2 .hero-2-item { min-height: 620px; }
+        .about-area-2 .about-media img,
+        .service-area-2 .item > a img,
+        .faq-area .image img,
+        .cta-area .right .pt-96 img,
+        .cta-area .right img {
+            height: auto;
+            min-height: 260px;
+        }
+    }
 </style>
 
 <!-- Hero Section Start -->
@@ -116,7 +237,7 @@ include './layout/layoutTop.php'
                 <h1 class="wow fadeInUp delay-0-2s">Un proveedor B2B que cumple tiempos, calidad y escala</h1>
             </div>
         </div>
-        <div class="row mb-64">
+        <div class="row mb-64 about-media">
             <img src="assets/images/abatilia/gallery-bano.jpeg" alt="about image">
         </div>
         <div class="row gap-64">
@@ -827,7 +948,22 @@ include './layout/layoutTop.php'
                 </div>
                 <p class="mt-96">Cuéntanos el tipo de proyecto y volumen estimado. Un asesor te contactará para aterrizar requerimientos y logística.</p>
                 <form class="cta-form" action="#">
-                    <input type="text" required placeholder="correo@empresa.com">
+                    <div class="field-group">
+                        <label for="cta-name">Nombre</label>
+                        <input id="cta-name" type="text" required placeholder="Tu nombre">
+                    </div>
+                    <div class="field-group">
+                        <label for="cta-email">Email</label>
+                        <input id="cta-email" type="email" required placeholder="correo@empresa.com">
+                    </div>
+                    <div class="field-group">
+                        <label for="cta-phone">Teléfono</label>
+                        <input id="cta-phone" type="tel" required placeholder="+52 ...">
+                    </div>
+                    <div class="field-group">
+                        <label for="cta-project">Sobre el proyecto</label>
+                        <textarea id="cta-project" placeholder="Comparte volumen, ubicación y tiempos estimados"></textarea>
+                    </div>
                     <button type="submit" class="theme-btn">Enviar solicitud</button>
                 </form>
             </div>
@@ -889,30 +1025,6 @@ include './layout/layoutTop.php'
                         <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionFaq">
                             <div class="accordion-body">
                                 Depende del volumen y del nivel de personalización. Definimos tiempos por frente de trabajo y entregas parciales para mantener el avance de obra sin detener otras partidas.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h5 class="accordion-header" id="heading4">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                ¿Abitalia opera fuera de Monterrey?
-                            </button>
-                        </h5>
-                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionFaq">
-                            <div class="accordion-body">
-                                Sí. Atendemos proyectos en distintas ciudades de México con logística coordinada y supervisión para asegurar consistencia de calidad en cada entrega.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h5 class="accordion-header" id="heading5">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                ¿Se pueden ajustar materiales o especificaciones según presupuesto?
-                            </button>
-                        </h5>
-                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionFaq">
-                            <div class="accordion-body">
-                                Sí. Proponemos alternativas técnicas y de acabado para equilibrar diseño, desempeño y costo sin comprometer la intención estética del proyecto.
                             </div>
                         </div>
                     </div>

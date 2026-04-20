@@ -1,3 +1,29 @@
+<?php if (isset($minimalFooter) && $minimalFooter): ?>
+<!-- footer area start -->
+<footer class="main-footer black-120-bg">
+    <style>
+        .minimal-footer-logo { max-height: 48px; width: auto; }
+        .minimal-wise-badge {
+            width: 30px;
+            height: 30px;
+            font-size: 13px;
+            line-height: 1;
+        }
+    </style>
+    <div class="container py-64">
+        <div class="text-center">
+            <a href="index-light.php" class="d-inline-block mb-24">
+                <img src="assets/images/abatilia/logo.png" alt="Abitalia logo" class="minimal-footer-logo">
+            </a>
+            <div class="d-flex align-items-center justify-content-center gap-12 text-white">
+                <span class="fw-light">Hecho por Wise</span>
+                <span class="minimal-wise-badge d-inline-flex align-items-center justify-content-center rounded-circle border border-light">W</span>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer area end -->
+<?php else: ?>
 <!-- footer area start -->
 <footer class="main-footer pt-128 black-120-bg">
     <div class="container">
@@ -136,3 +162,4 @@
     </div>
 </footer>
 <!-- footer area end -->
+<?php endif; ?>

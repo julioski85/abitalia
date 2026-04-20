@@ -270,6 +270,138 @@ include './layout/layoutTop.php'
         aspect-ratio: 32 / 9;
     }
 
+    #por-que-abitalia .about-media-video iframe {
+        width: 100%;
+        height: 100%;
+        transform: scale(1.22);
+        transform-origin: center;
+    }
+
+    .timeline-area {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+    }
+
+    .timeline-area::before,
+    .timeline-area::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .timeline-area::before {
+        inset: -20% auto auto -15%;
+        width: min(42vw, 520px);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(198, 40, 40, 0.28) 0%, rgba(198, 40, 40, 0) 72%);
+        animation: timelinePulse 8s ease-in-out infinite;
+    }
+
+    .timeline-area::after {
+        inset: auto -10% -35% auto;
+        width: min(52vw, 640px);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(229, 115, 115, 0.26) 0%, rgba(229, 115, 115, 0) 70%);
+        animation: timelineDrift 12s ease-in-out infinite;
+    }
+
+    .timeline-area > .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .timeline-content,
+    .timeline-content .slick-list,
+    .timeline-content .slick-track {
+        height: 100%;
+    }
+
+    .timeline-content .slick-list {
+        overflow: visible;
+        min-height: 420px;
+    }
+
+    .timeline-item .description {
+        overflow: hidden;
+    }
+
+    .timeline-item.slick-current .description,
+    .timeline-item .content:hover .description {
+        height: auto;
+        min-height: 108px;
+        max-height: none;
+        overflow: visible;
+    }
+
+    @keyframes timelinePulse {
+        0%, 100% {
+            transform: translate3d(0, 0, 0) scale(1);
+            opacity: 0.65;
+        }
+        50% {
+            transform: translate3d(6%, -4%, 0) scale(1.12);
+            opacity: 0.9;
+        }
+    }
+
+    @keyframes timelineDrift {
+        0%, 100% {
+            transform: translate3d(0, 0, 0) scale(1);
+            opacity: 0.62;
+        }
+        50% {
+            transform: translate3d(-8%, -7%, 0) scale(1.08);
+            opacity: 0.88;
+        }
+    }
+
+    .floating-cta-btn {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        z-index: 1040;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        color: #fff !important;
+        background: linear-gradient(135deg, var(--abt-primary) 0%, var(--abt-primary-dark) 100%);
+        box-shadow: 0 12px 28px rgba(198, 40, 40, 0.38);
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .floating-cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 30px rgba(198, 40, 40, 0.48);
+    }
+
+    @media (max-width: 991px) {
+        #por-que-abitalia .about-media-video {
+            aspect-ratio: 16 / 9;
+        }
+
+        .timeline-content .slick-list {
+            min-height: 350px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .floating-cta-btn {
+            right: 14px;
+            bottom: 14px;
+            padding: 11px 14px;
+            font-size: 13px;
+        }
+    }
+
     @media (prefers-reduced-motion: reduce) {
         .abt-reveal {
             opacity: 1;
@@ -1063,6 +1195,10 @@ include './layout/layoutTop.php'
 </div>
 <!-- Quote Modal end -->
 
+<a class="floating-cta-btn js-open-quote-modal" href="#" data-bs-toggle="modal" data-bs-target="#quoteModal">
+    Cotiza tu proyecto
+</a>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const revealTargets = document.querySelectorAll(
@@ -1086,6 +1222,32 @@ document.addEventListener('DOMContentLoaded', function () {
     revealTargets.forEach(function (element) {
         observer.observe(element);
     });
+
+    function syncTimelineHeight() {
+        var timelineSection = document.querySelector('.timeline-area');
+        var imageSlider = document.querySelector('.timeline-images');
+        var contentSlider = document.querySelector('.timeline-content');
+        if (!timelineSection || !imageSlider || !contentSlider) return;
+
+        var imageHeight = imageSlider.getBoundingClientRect().height;
+        if (!imageHeight) return;
+
+        contentSlider.style.height = imageHeight + 'px';
+        var slickList = contentSlider.querySelector('.slick-list');
+        if (slickList) {
+            slickList.style.height = imageHeight + 'px';
+        }
+    }
+
+    syncTimelineHeight();
+    window.addEventListener('load', syncTimelineHeight);
+    window.addEventListener('resize', syncTimelineHeight);
+
+    if (window.jQuery && jQuery('.timeline-content').length) {
+        jQuery('.timeline-content').on('init reInit setPosition afterChange', function () {
+            syncTimelineHeight();
+        });
+    }
 });
 </script>
 

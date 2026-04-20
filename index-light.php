@@ -236,25 +236,6 @@ include './layout/layoutTop.php'
         margin-bottom: 14px;
     }
 
-    .preloader {
-        background: #111;
-    }
-
-    .custom-loader {
-        width: 44px;
-        height: 44px;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        border-top-color: var(--abt-primary);
-        border-radius: 50%;
-        animation: spinPreloader 0.8s linear infinite;
-    }
-
-    @keyframes spinPreloader {
-        to { transform: rotate(360deg); }
-    }
-
-
-
     .main-header .main-menu .navigation > li > a {
         font-size: 14px;
         padding: 10px 0;
@@ -268,8 +249,20 @@ include './layout/layoutTop.php'
         transform: translateY(-1px);
     }
 
+    .main-header .header-cta-wrap {
+        display: flex;
+        align-items: center;
+        margin-left: 18px !important;
+        padding-left: 18px;
+        border-left: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
     .main-header .header-cta-wrap .header-quote-btn {
-        padding: 10px 22px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 10px 20px;
         font-size: 13px;
         letter-spacing: 0.06em;
         text-transform: uppercase;
@@ -364,8 +357,37 @@ include './layout/layoutTop.php'
         opacity: 0.8;
     }
 
+    .quote-modal {
+        z-index: 1080;
+    }
+
+    .quote-modal .modal-dialog {
+        pointer-events: auto;
+    }
+
     .modal-backdrop.show {
-        opacity: 0.58;
+        opacity: 0.56;
+        z-index: 1070;
+    }
+
+    body.modal-open .page-wrapper {
+        overflow: visible;
+    }
+
+    .faq-area .accordion-button {
+        font-size: 22px;
+    }
+
+    @media (min-width: 1400px) {
+        .faq-area .accordion-button {
+            font-size: 26px;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .faq-area .accordion-button {
+            font-size: 20px;
+        }
     }
 
     @media (max-width: 991px) {

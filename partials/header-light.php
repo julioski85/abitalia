@@ -31,17 +31,14 @@
                             <?php $isIndexLight = basename($_SERVER['PHP_SELF']) === 'index-light.php'; ?>
                             <?php if ($isIndexLight): ?>
                             <ul class="navigation clearfix onepage-menu">
-                                <li><a href="#inicio">Inicio</a></li>
                                 <li><a href="#por-que-abitalia">Por qué Abitalia</a></li>
                                 <li><a href="#servicios">Servicios</a></li>
                                 <li><a href="#trabajos-recientes">Trabajos Recientes</a></li>
                                 <li><a href="#confianza">Confianza</a></li>
                                 <li><a href="#faq">FAQ</a></li>
-                                <li><a href="#" class="js-open-quote-modal" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar</a></li>
                             </ul>
                             <?php else: ?>
                             <ul class="navigation clearfix">
-                                <li><a href="index-light.php#inicio">Inicio</a></li>
                                 <li><a href="about-light.php">About</a></li>
                                 <li><a href="projects-light.php">Projects</a></li>
                                 <li><a href="contact-light.php">Contact</a></li>

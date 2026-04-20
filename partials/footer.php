@@ -2,7 +2,8 @@
 <!-- footer area start -->
 <footer class="main-footer black-120-bg">
     <style>
-        .minimal-footer-logo { max-height: 48px; width: auto; }
+        .minimal-footer-logo { max-height: 54px; width: auto; }
+        .main-footer.black-120-bg { background: #f5f5f3; border-top: 1px solid #e6e1dd; }
         .minimal-wise-badge {
             width: 30px;
             height: 30px;
@@ -13,11 +14,11 @@
     <div class="container py-64">
         <div class="text-center">
             <a href="index-light.php" class="d-inline-block mb-24">
-                <img src="assets/images/abatilia/logo.png" alt="Abitalia logo" class="minimal-footer-logo">
+                <img src="https://abitalia.mkt-wise.com/5/assets/images/abatilia/logo%20(3)%20negro.png" alt="Abitalia logo" class="minimal-footer-logo">
             </a>
-            <div class="d-flex align-items-center justify-content-center gap-12 text-white">
+            <div class="d-flex align-items-center justify-content-center gap-12 text-black">
                 <span class="fw-light">Hecho por Wise</span>
-                <span class="minimal-wise-badge d-inline-flex align-items-center justify-content-center rounded-circle border border-light">W</span>
+                <span class="minimal-wise-badge d-inline-flex align-items-center justify-content-center rounded-circle border border-dark">W</span>
             </div>
         </div>
     </div>

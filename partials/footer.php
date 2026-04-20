@@ -7,25 +7,18 @@
         .minimal-wise-signature {
             margin-top: 16px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+            gap: 6px;
             color: #111;
         }
         .minimal-wise-signature .minimal-wise-text {
             font-size: 14px;
             letter-spacing: 0.04em;
         }
-        .minimal-wise-signature .minimal-wise-letter {
-            width: 32px;
-            height: 32px;
-            border: 1px solid #111;
-            border-radius: 999px;
-            font-size: 13px;
-            line-height: 1;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+        .minimal-wise-signature .minimal-wise-heart {
+            font-size: 14px;
         }
     </style>
     <div class="container py-64">
@@ -34,8 +27,8 @@
                 <img src="https://abitalia.mkt-wise.com/5/assets/images/abatilia/logo%20(3)%20negro.png" alt="Abitalia logo" class="minimal-footer-logo">
             </a>
             <div class="minimal-wise-signature">
-                <span class="minimal-wise-text">Hecho por Wise</span>
-                <span class="minimal-wise-letter">W</span>
+                <span class="minimal-wise-text">Hecho por Wise y</span>
+                <span class="minimal-wise-heart" aria-label="corazón">❤️</span>
             </div>
         </div>
     </div>

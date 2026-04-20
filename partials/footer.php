@@ -2,7 +2,7 @@
 <!-- footer area start -->
 <footer class="main-footer black-120-bg">
     <style>
-        .minimal-footer-logo { max-height: 54px; width: auto; }
+        .minimal-footer-logo { max-height: 54px; width: auto; display: block; margin: 0 auto; }
         .main-footer.black-120-bg { background: #f5f5f3; border-top: 1px solid #e6e1dd; }
         .minimal-wise-signature {
             margin-top: 16px;
@@ -26,6 +26,22 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
+        }
+        @media (max-width: 767px) {
+            .main-footer .container.py-64 {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+            .main-footer .text-center > a {
+                display: inline-flex !important;
+                justify-content: center;
+                width: 100%;
+            }
+            .minimal-footer-logo {
+                max-height: 44px;
+                max-width: min(78vw, 280px);
+                object-fit: contain;
+            }
         }
     </style>
     <div class="container py-64">

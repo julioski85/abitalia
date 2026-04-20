@@ -1,823 +1,299 @@
 <?php include './layout/layoutTop.php' ?>
 
-<!-- Hero Section Start -->
-<section class="hero-area black-120-bg">
-    <div class="carousel slide" id="recipeCarousel" data-bs-ride="carousel">
-        <div class=" carousel-inner" role="listbox">
-            <div class="carousel-item active" style="background-image: url(assets/images/background/slider-1.png);">
-                <div class="container pt-64 pb-64">
-                    <p class="text-white category-line category-hero">MODERN</p>
-                    <h1 class="col-lg-10 text-white">Architecture And Interior Design From Arinde</h1>
-                    <div class="row pt-32">
-                        <div class="carousel-buttons col-6">
-                            <button class="prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                            </button>
-                            <button class="" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                            </button>
-                        </div>
-                        <div class="small-img col-6">
-                            <a href="project-details.php">
-                                <img class="hero-img wow zoomIn" src="assets/images/background/slider-1-sm.png" alt="hero image" title="hero image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item" style="background-image: url(assets/images/background/slider-2.png);">
-                <div class="container pt-64 pb-64">
-                    <p class="text-white category-line category-hero">DESGIN</p>
-                    <h1 class="col-lg-10 text-white">Interior And Architecture Design From Arinde</h1>
-                    <div class="row pt-32">
-                        <div class="carousel-buttons col-6">
-                            <button class="prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                            </button>
-                            <button class="" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                            </button>
-                        </div>
-                        <div class="small-img col-6">
-                            <a href="project-details.php">
-                                <img class="hero-img wow zoomIn" src="assets/images/background/slider-2-sm.jpg" alt="hero image" title="hero image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Hero Section End -->
+<style>
+    @font-face {
+        font-family: 'IVY ORA';
+        src: url('assets/fonts/IvyOraDisplay-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+    }
 
-<!-- About Area start -->
-<section class="about-area py-128 black-100-bg">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-sm-12 content pt-40">
-                <div class="big-text category-line">ABOUT US</div>
-                <div class="row pt-32">
-                    <h2 class="col-md-6">We are a passionate team aim to creating best living spaces</h2>
-                </div>
-                <div class="row pt-96 pb-64">
-                    <p class="col-md-6 col-lg-3 text">ARINDE has worked on projects nationwide and worldwide, designs that make magic happen, without the wand. focuses more on structural design, whereas interior design is the practice of creating interior atmosphere. This involves carefully designing lines, colors, plants, lighting, building materials, and space to create an area that feels nurturing to the human body.</p>
-                    <img class="small-image col-md-6 col-lg-5 wow zoomIn" src="assets/images/about/image-2.png" alt="about image" title="about image">
-                </div>
-            </div>
-            <img class="col-sm-12 col-md-6 right-image wow zoomIn" src="assets/images/about/image-1.png" alt="about image" title="about image">
-        </div>
-    </div>
-</section>
-<!-- About Area end -->
+    @font-face {
+        font-family: 'Helvetica Neue LT';
+        src: url('assets/fonts/HelveticaNeueLTStdRoman.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
 
-<!-- Service Section Start -->
-<section class="service-area black-120-bg py-128 justify-content-center">
-    <div class="container">
-        <div class="d-flex section-heading mb-96">
-            <div class="section-title">
-                <h2 class="wow fadeInUp delay-0-2s">Services Provided In Interior <br>And Architecture Design </h2>
-            </div>
-            <div class="carousel-buttons buttons-vertical">
-                <button class="prev" type="button" data-bs-target="#servicerecipeCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <button class="" type="button" data-bs-target="#servicerecipeCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
-            </div>
-        </div>
-        <div class="carousel slide" id="servicerecipeCarousel" data-bs-ride="carousel">
+    .abitalia-landing h1,
+    .abitalia-landing h2,
+    .abitalia-landing h3,
+    .abitalia-landing h4,
+    .abitalia-landing h5,
+    .abitalia-landing h6,
+    .abitalia-landing .category-line,
+    .abitalia-landing .sub-title,
+    .abitalia-landing .hero-kpi strong,
+    .abitalia-landing .brand-name {
+        font-family: 'IVY ORA', serif;
+        letter-spacing: 0.02em;
+    }
+
+    .abitalia-landing p,
+    .abitalia-landing li,
+    .abitalia-landing a,
+    .abitalia-landing span,
+    .abitalia-landing input,
+    .abitalia-landing textarea,
+    .abitalia-landing button {
+        font-family: 'Helvetica Neue LT', 'Helvetica', sans-serif;
+    }
+
+    .abitalia-landing .accent-red { color: #9d1f1f; }
+    .abitalia-landing .accent-green { color: #2f6c53; }
+    .abitalia-landing .brand-soft-red { background: rgba(157, 31, 31, 0.1); }
+    .abitalia-landing .brand-soft-green { background: rgba(47, 108, 83, 0.14); }
+
+    .abitalia-landing .hero-logo {
+        max-width: 220px;
+        margin-bottom: 24px;
+    }
+
+    .abitalia-landing .media-frame {
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .abitalia-landing .media-frame iframe {
+        width: 100%;
+        min-height: 360px;
+    }
+
+    .abitalia-landing .stat-chip {
+        display: inline-block;
+        padding: 10px 16px;
+        border-radius: 40px;
+        color: #fff;
+        margin-top: 18px;
+        font-size: 14px;
+    }
+
+    .abitalia-landing .icon-card img {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+        margin-bottom: 16px;
+    }
+
+    .abitalia-landing .gallery-grid img,
+    .abitalia-landing .mini-gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .abitalia-landing .mini-gallery .item,
+    .abitalia-landing .gallery-grid .item {
+        margin-bottom: 24px;
+    }
+
+    .abitalia-landing .contact-box {
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 8px;
+        padding: 32px;
+    }
+
+    .abitalia-landing .btn-brand {
+        background: #9d1f1f;
+        color: #fff;
+        border: 0;
+    }
+
+    .abitalia-landing .btn-brand:hover {
+        background: #2f6c53;
+        color: #fff;
+    }
+</style>
+
+<div class="abitalia-landing">
+    <section class="hero-area black-120-bg" id="top">
+        <div class="carousel slide" id="recipeCarousel" data-bs-ride="carousel">
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 item service-act">
-                        <h5>01</h5>
-                        <a href="project-details.php"><img src="assets/images/services/sv-img-1.png" alt="service image"></a>
-                        <div class="carousel-caption">
-                            <a href="project-details.php">
-                                <h6 class="text-black">PROJECT INCEPTION</h6>
-                            </a>
-                            <p class="mb-16">We have several strategic teaming arrangements with experienced to complete full design services.</p>
-                            <a href="project-details.php"><span class="right-arrow text-black"><i class="fa fa-long-arrow-right"></i></span></a>
-                        </div>
+                <div class="carousel-item active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url('assets/images/abatilia/hero.jpeg'); background-size: cover; background-position: center;">
+                    <div class="container pt-64 pb-64">
+                        <img class="hero-logo" src="assets/images/abatilia/logo blanco abatilia.png" alt="Abatilia logo">
+                        <p class="text-white category-line category-hero">TODO MÉXICO · PROYECTOS B2B</p>
+                        <h1 class="col-lg-10 text-white">Diseño y fabricación de mobiliario para proyectos residenciales e inmobiliarios</h1>
+                        <p class="col-lg-7 text-white mt-24">La calidad y atención al detalle nos distinguen: cocinas, closets y baños fabricados con procesos modernos, capacidad escalable y entregas coordinadas por etapa.</p>
+                        <span class="stat-chip brand-soft-green">400 cocinas / mes · Capacidad de producción</span>
                     </div>
                 </div>
-                <div class="carousel-item ">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 item service-act">
-                        <h5>02</h5>
-                        <a href="project-details.php"><img src="assets/images/services/sv-img-2.png" alt="service image"></a>
-                        <div class="carousel-caption">
-                            <a href="project-details.php">
-                                <h6 class="text-black">INTERIOR DESIGN</h6>
-                            </a>
-                            <p class="mb-16">We have several strategic teaming arrangements with experienced to complete full design services.</p>
-                            <a href="project-details.php"><span class="text-black right-arrow"><i class="fa fa-long-arrow-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item ">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 item service-act">
-                        <h5>03</h5>
-                        <a href="project-details.php"><img src="assets/images/services/sv-img-3.png" alt="service image"></a>
-                        <div class="carousel-caption">
-                            <a href="project-details.php">
-                                <h6 class="text-black">LANDSCAPE DESIGN</h6>
-                            </a>
-                            <p class="mb-16">We have several strategic teaming arrangements with experienced to complete full design services.</p>
-                            <a href="project-details.php"><span class="text-black right-arrow"><i class="fa fa-long-arrow-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item ">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 item service-act">
-                        <h5>04</h5>
-                        <a href="project-details.php"><img src="assets/images/services/sv-img-4.png" alt="service image"></a>
-                        <div class="carousel-caption">
-                            <a href="project-details.php">
-                                <h6 class="text-black">HOME RENOVATION</h6>
-                            </a>
-                            <p class="mb-16">We have several strategic teaming arrangements with experienced to complete full design services.</p>
-                            <a href="project-details.php"><span class="text-black right-arrow"><i class="fa fa-long-arrow-right"></i></span></a>
-                        </div>
+                <div class="carousel-item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.62)), url('assets/images/abatilia/ima4.jpg'); background-size: cover; background-position: center;">
+                    <div class="container pt-64 pb-64">
+                        <img class="hero-logo" src="assets/images/abatilia/logo.png" alt="Abatilia">
+                        <p class="text-white category-line category-hero">MANUFACTURA PREMIUM</p>
+                        <h1 class="col-lg-10 text-white">Un proveedor que cumple tiempos, calidad y escala para constructoras y desarrolladoras</h1>
+                        <p class="col-lg-7 text-white mt-24">Documentación clara, trazabilidad de avance y acabados premium para mantener consistencia en cada unidad.</p>
+                        <span class="stat-chip brand-soft-red">+15 años · Experiencia en fabricación</span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Services Section End -->
+    </section>
 
-<!-- Home Projects Area start -->
-<section class="homeproject-area py-128">
-    <div class="container">
-        <div class="row rel z-1 justify-content-center">
-            <div class="section-title text-center mb-96 wow fadeInUp delay-0-2s">
-                <span class="sub-title mb-16">PROJECTS</span>
-                <h2>Latest Works</h2>
-            </div>
-        </div>
-        <ul class="project-filter tab-style-one justify-content-center nav nav-pills nav-fill mb-96 wow fadeInUp delay-0-4s">
-            <li data-filter="*" class="nav-item current">
-                <a class="nav-link">ALL</a>
-            </li>
-            <li class="nav-item" data-filter=".ARCHITECTURE">
-                <a class="nav-link">ARCHITECTURE</a>
-            </li>
-            <li class="nav-item" data-filter=".INTERIOR">
-                <a class="nav-link">INTERIOR</a>
-            </li>
-            <li class="nav-item" data-filter=".LANDSCAPE">
-                <a class="nav-link">LANDSCAPE</a>
-            </li>
-            <li class="nav-item" data-filter=".REMODELING">
-                <a class="nav-link">REMODELING</a>
-            </li>
-        </ul>
-        <div class="row gap-128 project-active">
-            <div class="col-xl-6 col-md-6 item ARCHITECTURE">
-                <div class="row apartment-image wow fadeInLeft delay-0-1s">
-                    <a href="project-details.php"><img src="assets/images/architecture-projects/pr-1.png" alt="Apartment"></a>
-                </div>
-                <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
-                    <div class="pro-title text-center">
-                        <a href="project-details.php">
-                            <h4 class="text-black">VILLA DESIGN</h4>
-                        </a>
-                        <span class="category">ARCHITECTURE</span>
+    <section class="about-area py-128 black-100-bg" id="beneficios">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="big-text category-line accent-green">¿POR QUÉ ABATILIA?</div>
+                    <h2 class="pt-32">Un flujo de trabajo claro para ejecutar con precisión</h2>
+                    <p class="pt-24">Diseñamos y fabricamos mobiliario integral con foco en ejecución real de obra: menos fricción, mejor control operativo y una experiencia premium para constructoras, hotelería, despachos y distribuidores.</p>
+                    <div class="row pt-32 mini-gallery">
+                        <div class="col-4 item"><img src="assets/images/abatilia/ima1.png" alt="Proceso Abatilia"></div>
+                        <div class="col-4 item"><img src="assets/images/abatilia/ima2.png" alt="Acabados Abatilia"></div>
+                        <div class="col-4 item"><img src="assets/images/abatilia/ima3.webp" alt="Producción Abatilia"></div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-6 col-md-6 item INTERIOR">
-                <div class="row apartment-image wow fadeInLeft delay-0-1s">
-                    <a href="project-details.php"><img src="assets/images/architecture-projects/pr-2.png" alt="Apartment"></a>
-                </div>
-                <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
-                    <div class="pro-title text-center">
-                        <a href="project-details.php">
-                            <h4 class="text-black">MODERN HOUSE</h4>
-                        </a>
-                        <span class="category">INTERIOR</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-6 item LANDSCAPE">
-                <div class="row apartment-image wow fadeInLeft delay-0-1s">
-                    <a href="project-details.php"><img src="assets/images/architecture-projects/pr-3.png" alt="Apartment"></a>
-                </div>
-                <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
-                    <div class="pro-title text-center">
-                        <a href="project-details.php">
-                            <h4 class="text-black">MOUNTAIN HOUSE</h4>
-                        </a>
-                        <span class="category">LANDSCAPE</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-6 item REMODELING">
-                <div class="row apartment-image wow fadeInLeft delay-0-1s">
-                    <a href="project-details.php"><img src="assets/images/architecture-projects/pr-4.png" alt="Apartment"></a>
-                </div>
-                <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
-                    <div class="pro-title text-center">
-                        <a href="project-details.php">
-                            <h4 class="text-black">HOME RENOVATION</h4>
-                        </a>
-                        <span class="category">REMODELING</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-6 item INTERIOR">
-                <div class="row apartment-image wow fadeInLeft delay-0-1s">
-                    <a href="project-details.php"><img src="assets/images/architecture-projects/pr-5.png" alt="Apartment"></a>
-                </div>
-                <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
-                    <div class="pro-title text-center">
-                        <a href="project-details.php">
-                            <h4 class="text-black">KITCHEN DESIGN</h4>
-                        </a>
-                        <span class="category">INTERIOR</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-6 item ARCHITECTURE">
-                <div class="row apartment-image wow fadeInLeft delay-0-1s">
-                    <a href="project-details.php"><img src="assets/images/architecture-projects/pr-6.png" alt="Apartment"></a>
-                </div>
-                <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
-                    <div class="pro-title text-center">
-                        <a href="project-details.php">
-                            <h4 class="text-black">HOUSE DESIGN</h4>
-                        </a>
-                        <span class="category">ARCHITECTURE</span>
+                <div class="col-lg-6">
+                    <div class="media-frame wow zoomIn">
+                        <iframe src="https://www.youtube.com/embed/hAwFTqJLbzI?autoplay=1&mute=1&loop=1&playlist=hAwFTqJLbzI&controls=0&rel=0&modestbranding=1&playsinline=1" title="Video Abatilia" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-12 text-center">
-            <a class="loadmore primary-readmore" href="projects.php">More Projects</a>
-        </div>
-    </div>
-</section>
-<!-- Home Projects Area end -->
+    </section>
 
-<!-- Interior Projects Section Start -->
-<section class="interior-area black-120-bg py-128 justify-content-center">
-    <div class="container-fluid">
-        <div class="container rel z-1 justify-content-center text-center">
-            <div class="text-center mb-96 wow fadeInUp delay-0-2s">
-                <span class="sub-title mb-16">PROJECTS</span>
-                <h2>Latest Works</h2>
+    <section class="service-area black-120-bg py-128" id="capacidad">
+        <div class="container">
+            <div class="section-title mb-64 text-center">
+                <p class="category-line accent-red">CAPACIDAD Y CONTROL</p>
+                <h2>Fabricamos hasta <span class="accent-green">400 cocinas</span> por mes</h2>
+                <p class="col-lg-8 mx-auto pt-24">Instalaciones de primer nivel y un sistema de manufactura moderno para atender grandes demandas, cuidando cada detalle en cocinas, closets y baños.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="item service-act icon-card">
+                        <img src="assets/images/abatilia/icon-axis.png" alt="Adaptabilidad">
+                        <h6 class="text-black">Nos adaptamos a tu proyecto</h6>
+                        <p>Configuramos espacios, acabados y detalles para cada tipología.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item service-act icon-card">
+                        <img src="assets/images/abatilia/icon-clock.png" alt="Entrega">
+                        <h6 class="text-black">Entregas coordinadas</h6>
+                        <p>Seguimiento de producción y logística para decisiones rápidas de obra.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item service-act icon-card">
+                        <img src="assets/images/abatilia/icon-kitchen.png" alt="Acabados">
+                        <h6 class="text-black">Funciones premium</h6>
+                        <p>Herrajes especiales y organización interna con consistencia de calidad.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="container section-heading">
-            <div class="nav-fill-left">
-                <ul class="tab-style-one nav interior-nav nav-pills nav-fill mb-96 wow fadeInUp delay-0-4s">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-bs-toggle="tab" href="#inter-tap1">ALL</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#inter-tap2">HOUSE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#inter-tap3">VILLA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#inter-tap4">RESTAURANT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#inter-tap5">HOTEL</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="tab-content">
-            <div class="tab-pane fade show active" id="inter-tap1">
-                <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel1" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <div class="carousel slide interior-nav" id="interiorrecipeCarousel1" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img class="zoomIn" src="assets/images/interior/item-1.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">VILLA ROOM</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Villa Room</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img src="assets/images/interior/item-2.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">KITCHEN</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Minimalism Style</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img src="assets/images/interior/item-3.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">WORK ROOM</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Work Room</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="next" type="button" data-bs-target="#interiorrecipeCarousel1" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
-            </div>
-            <div class="tab-pane fade show" id="inter-tap2">
-                <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel2" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <div class="carousel slide interior-nav" id="interiorrecipeCarousel2" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img class="zoomIn" src="assets/images/interior/item-5.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">VILLA ROOM</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Villa Room</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img src="assets/images/interior/item-2.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">KITCHEN</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Minimalism Style</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img src="assets/images/interior/item-3.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">WORK ROOM</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Work Room</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="next" type="button" data-bs-target="#interiorrecipeCarousel2" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
-            </div>
-            <div class="tab-pane fade show" id="inter-tap3">
-                <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel3" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <div class="carousel slide interior-nav" id="interiorrecipeCarousel3" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img class="zoomIn" src="assets/images/interior/item-4.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">VILLA ROOM</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Villa Room</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img src="assets/images/interior/item-2.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">KITCHEN</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Minimalism Style</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img src="assets/images/interior/item-3.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">WORK ROOM</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Work Room</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="next" type="button" data-bs-target="#interiorrecipeCarousel3" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
-            </div>
-            <div class="tab-pane fade show" id="inter-tap4">
-                <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel4" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <div class="carousel slide interior-nav" id="interiorrecipeCarousel4" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img class="zoomIn" src="assets/images/interior/item-6.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">VILLA ROOM</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Villa Room</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img src="assets/images/interior/item-2.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">KITCHEN</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Minimalism Style</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img src="assets/images/interior/item-3.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">WORK ROOM</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Work Room</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="next" type="button" data-bs-target="#interiorrecipeCarousel4" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
-            </div>
-            <div class="tab-pane fade show" id="inter-tap5">
-                <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel5" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <div class="carousel slide interior-nav" id="interiorrecipeCarousel5" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img class="zoomIn" src="assets/images/interior/item-4.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">VILLA ROOM</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Villa Room</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img src="assets/images/interior/item-2.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">KITCHEN</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Minimalism Style</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details.php"><img src="assets/images/interior/item-5.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">WORK ROOM</span>
-                                    <a href="project-details.php">
-                                        <h4 class="text-black">Work Room</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="next" type="button" data-bs-target="#interiorrecipeCarousel5" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Interior Projects Section End -->
+    </section>
 
-<!-- Timeline Area start -->
-<section class="timeline-area py-128 black-110">
-    <div class="container">
-        <div class="row section-heading mb-96">
-            <div class="section-title col-sm-7 col-lg-7">
-                <h2 class="wow fadeInUp delay-0-2s">Bring Your Vision To Life In Five Steps</h2>
+    <section class="interior-area black-100-bg py-128" id="galeria">
+        <div class="container">
+            <div class="text-center mb-96">
+                <p class="sub-title mb-16">GALERÍA</p>
+                <h2>Diseño elegante, funcionalidad real</h2>
+                <p>Algunos trabajos en closets, baños y cocinas para proyectos B2B.</p>
             </div>
-            <div class="button col-sm-5 col-lg-5">
-                <a class="theme-btn" href="contact.php">Contact Us</a>
+            <div class="row gallery-grid">
+                <div class="col-md-4 item"><img src="assets/images/abatilia/gallery-closet.jpg" alt="Closet Abatilia"></div>
+                <div class="col-md-4 item"><img src="assets/images/abatilia/gallery-bano.jpeg" alt="Baño Abatilia"></div>
+                <div class="col-md-4 item"><img src="assets/images/abatilia/hero.jpeg" alt="Cocina Abatilia"></div>
+                <div class="col-md-6 item"><img src="assets/images/abatilia/ima4.jpg" alt="Proyecto premium Abatilia"></div>
+                <div class="col-md-6 item"><img src="assets/images/abatilia/ima3.webp" alt="Producción y ensamble Abatilia"></div>
             </div>
-        </div>
-        <div class="row gap-64 align-items-center">
-            <div class=" col-md-12 col-lg-6">
-                <div class="timeline-images wow fadeInLeft delay-0-2s">
-                    <img src="assets/images/work-process/image-1.png" alt="Timeline">
-                    <img src="assets/images/work-process/image-2.png" alt="Timeline">
-                    <img src="assets/images/work-process/image-3.png" alt="Timeline">
-                    <img src="assets/images/work-process/image-4.png" alt="Timeline">
-                    <img src="assets/images/work-process/image-5.jpg" alt="Timeline">
-                </div>
-            </div>
-            <div class=" col-md-12 col-lg-6">
-                <div class="timeline-content wow fadeInRight delay-0-2s">
-                    <div class="timeline-item">
-                        <div class="icon"></div>
-                        <div class="content">
-                            <div class="wprocess-title">
-                                <span class="h4 title">1. IDEAS</span>
-                                <span class="arrow-icon"></span>
-                            </div>
-                            <p class="description">In this step, we will find out your design ambitions, timescales and budgets. Build a detailed brief, and then we will develop architectural layouts for your property. Create 3D models and renders that describing the volumetric aspects of the design.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="icon"></div>
-                        <div class="content">
-                            <div class="wprocess-title">
-                                <span class="h4 title">2. CONCEPT</span>
-                                <span class="arrow-icon"></span>
-                            </div>
-                            <p class="description">And this step will, find out your design ambitions, your timescales, your budgets. Build a detailed brief, and then develop architectural layouts for your property. Reflect your design preferences. Create renders and create 3D models that describing the volumetric aspects of the design.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="icon"></div>
-                        <div class="content">
-                            <div class="wprocess-title">
-                                <span class="h4 title">3. DESIGN</span>
-                                <span class="arrow-icon"></span>
-                            </div>
-                            <p class="description">Drawings, scaled floor plans showing furniture placement, mood boards, color, material,... Build a detailed brief, and then develop architectural layouts for your property. Reflect your design preferences. Create renders and create 3D models that describing the volumetric aspects of the design. Reflect your design preferences. Create renders and create 3D models that describing the volumetric aspects of the design.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="icon"></div>
-                        <div class="content">
-                            <div class="wprocess-title">
-                                <span class="h4 title">4. DEVELOP</span>
-                                <span class="arrow-icon"></span>
-                            </div>
-                            <p class="description">Defining price, providing the price of items upon which the final product will be built. Build a detailed brief, and then develop architectural layouts for your property. Reflect your design preferences. Create renders and create 3D models that describing the volumetric aspects of the design.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="icon"></div>
-                        <div class="content">
-                            <div class="wprocess-title">
-                                <span class="h4 title">5. EVALUATION</span>
-                                <span class="arrow-icon"></span>
-                            </div>
-                            <p class="description">Surveys, interviews, walkthroughs, compare and comment on design works. Build a detailed brief, and then develop architectural layouts for your property. Reflect your design preferences. Create renders and create 3D models that describing the volumetric aspects of the design.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="media-frame mt-32">
+                <iframe src="https://www.youtube.com/embed/0x_1sJDeGhE?autoplay=1&mute=1&loop=1&playlist=0x_1sJDeGhE&controls=0&rel=0&modestbranding=1&playsinline=1" title="Flujo de trabajo Abatilia" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Reviews Area start -->
-<section class="reviews-area py-128 black-100-bg" style="background-image: url(assets/images/background/testimonials.png);">
-    <div class="container">
-        <div class="d-flex section-heading mb-96">
-            <div class="section-title">
-                <p class="category-line">TESTIMONIALS</p>
-                <h2 class="wow fadeInUp delay-0-2s">What Our Clients Say</h2>
-            </div>
-            <div class="carousel-buttons buttons-vertical">
-                <button class="prev" type="button" data-bs-target="#testiCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <button class="" type="button" data-bs-target="#testiCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 col-lg-5 left">
-                <div class="mobile-mb black-100-bg">
-                    <div class="counter-text-wrap wow fadeInUp delay-0-2s">
-                        <div class="d-flex justify-content-center">
-                            <h4 class="count-text mb-16" data-speed="3000" data-stop="80">0</h4><span class="h4">%</span>
-                        </div>
-                        <p class="counter-title">Returning Clients</p>
-                    </div>
+    <section class="timeline-area py-128 black-110" id="faq">
+        <div class="container">
+            <div class="row section-heading mb-64">
+                <div class="section-title col-lg-8">
+                    <p class="category-line">PREGUNTAS FRECUENTES</p>
+                    <h2>Lo esencial para decisiones B2B</h2>
                 </div>
-                <div class="mobile-mb white-bg">
-                    <div class="counter-text-wrap wow fadeInUp delay-0-4s">
-                        <div class="d-flex justify-content-center">
-                            <h4 class="text-black count-text mb-16" data-speed="3000" data-stop="5">0</h4> <span><i class="fa fa-star"></i></span>
-                        </div>
-                        <p class="text-black counter-title">Average Rating</p>
-                    </div>
-                </div>
-                <div class="mobile-mb primary-bg">
-                    <div class="counter-text-wrap wow fadeInUp delay-0-2s">
-                        <div class="d-flex justify-content-center">
-                            <h4 class="count-text mb-16" data-speed="3000" data-stop="250">0</h4><span class="h4">K+</span>
-                        </div>
-                        <p class="counter-title">Happy Clients</p>
-                    </div>
+                <div class="button col-lg-4 text-lg-end">
+                    <a class="theme-btn btn-brand" href="#contacto">Cotiza tu proyecto</a>
                 </div>
             </div>
-            <div id="testiCarousel" class="col-md-12 col-lg-7 testimonials-slider carousel slide wow fadeInUp delay-0-4s" data-bs-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="row carousel-item active ">
-                        <div class="testimonial-item">
-                            <div class="section-title mb-32 wow fadeInUp delay-0-2s">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="h5 author-text mb-32">“I loved this company! Because not only the finished project is beautiful, it’s also exactly what we hoped. I give 5 out of 5 stars to the project and highly recommend.”</div>
-                            <div class="d-flex">
-                                <img class="testi-img" src="assets/images/testimonials/author-1.jpg" alt="review author image">
-                                <div class="testi-author">
-                                    <h5 class="text-white">Olivia Dunham</h5>
-                                    <p class="designations">Model at VS</p>
-                                </div>
-                                <i class="fas fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row carousel-item">
-                        <div class="testimonial-item">
-                            <div class="section-title mb-32 wow fadeInUp delay-0-2s">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="h5 author-text mb-32">“I loved this company! And give the project 5 out of 5 stars and strongly recommend. Because the finished project not only beautiful but also exactly what we hoped. ”</div>
-                            <div class="d-flex">
-                                <img class="testi-img" src="assets/images/testimonials/author-2.jpg" alt="review author image">
-                                <div class="testi-author">
-                                    <h5 class="text-white">David John</h5>
-                                    <p class="designations">Business analyst at Apple</p>
-                                </div>
-                                <i class="fas fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row carousel-item">
-                        <div class="testimonial-item">
-                            <div class="section-title mb-32 wow fadeInUp delay-0-2s">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="h5 author-text mb-32">“Love love love this company! I give the project 5 out of 5 stars and strongly recommend. Because the finished project not only beautiful but also exactly what we hoped. ”</div>
-                            <div class="d-flex">
-                                <img class="testi-img" src="assets/images/testimonials/author-3.jpg" alt="review author image">
-                                <div class="testi-author">
-                                    <h5 class="text-white">Paul Smith</h5>
-                                    <p class="designations">Model at VS</p>
-                                </div>
-                                <i class="fas fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
+            <div class="timeline-content">
+                <div class="timeline-item">
+                    <div class="icon"></div>
+                    <div class="content"><div class="wprocess-title"><span class="h4 title">¿Abatilia se adapta a mi presupuesto?</span></div><p class="description">Sí. Contamos con materiales y herrajes de diferentes gamas para ajustar alcance, diseño y desempeño a cada proyecto.</p></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="icon"></div>
+                    <div class="content"><div class="wprocess-title"><span class="h4 title">¿Fabrican además de cocinas?</span></div><p class="description">Fabricamos closets, baños y muebles complementarios; también te asesoramos en especificación de acabados.</p></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="icon"></div>
+                    <div class="content"><div class="wprocess-title"><span class="h4 title">¿Puedo llevar mi render o diseño?</span></div><p class="description">Claro. Puedes compartir renders, referencias y fotografías; con ciudad, volumen y tiempos estimados cotizamos con mayor precisión.</p></div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Reviews Area end -->
+    </section>
 
-<!-- CTA Area start -->
-<section class="cta-area py-128 black-120-bg">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-sm-12 col-lg-6 left wow fadeInUp delay-0-2s">
+    <section class="reviews-area py-128 black-100-bg" style="background-image: url(assets/images/background/testimonials.png);">
+        <div class="container">
+            <div class="d-flex section-heading mb-96">
                 <div class="section-title">
-                    <p class="category-line">SUBSCRIBE</p>
-                    <h2 class="wow fadeInUp delay-0-2s">Want some tips?</h2>
+                    <p class="category-line">PRUEBA SOCIAL</p>
+                    <h2>Confianza construida en entregables</h2>
                 </div>
-                <p class="mt-96">Join our email list for design tips, news & more!</p>
-                <form class="cta-form" action="#">
-                    <input type="text" required placeholder="Your Email Address">
-                    <button type="submit" class="theme-btn">Subscribe</button>
-                </form>
             </div>
-            <div class="col-sm-12 col-lg-6 right wow fadeInUp delay-0-2s">
-                <div class="row">
-                    <div class="col-sm-6 wow fadeInUp delay-0-2s pt-96">
-                        <img src="assets/images/cta/cta-1.png" alt="Timeline">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mobile-mb black-100-bg">
+                    <div class="counter-text-wrap">
+                        <div class="d-flex justify-content-center"><h4 class="count-text mb-16" data-speed="3000" data-stop="95">0</h4><span class="h4">%</span></div>
+                        <p class="counter-title">Cumplimiento de cronograma</p>
                     </div>
-                    <div class="col-sm-6 wow fadeInUp delay-0-2s">
-                        <img src="assets/images/cta/cta-2.png" alt="Timeline">
+                </div>
+                <div class="col-md-6 col-lg-4 mobile-mb white-bg">
+                    <div class="counter-text-wrap">
+                        <div class="d-flex justify-content-center"><h4 class="text-black count-text mb-16" data-speed="3000" data-stop="5">0</h4><span><i class="fa fa-star"></i></span></div>
+                        <p class="text-black counter-title">Nivel promedio de satisfacción</p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4 mobile-mb primary-bg">
+                    <div class="counter-text-wrap">
+                        <div class="d-flex justify-content-center"><h4 class="count-text mb-16" data-speed="3000" data-stop="400">0</h4><span class="h4">+</span></div>
+                        <p class="counter-title">Cocinas por mes en capacidad instalada</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- CTA Area end -->
+    </section>
 
-<!-- Blog Area start -->
-<section class="blog-area blog-home py-128 black-100-bg">
-    <div class="container">
-        <div class="row section-heading mb-96">
-            <div class="section-title col-sm-7 col-lg-7">
-                <h2 class="wow fadeInUp delay-0-2s">Latest New</h2>
-            </div>
-            <div class="button col-sm-5 col-lg-5">
-                <a class="theme-btn" href="projects.php">View More</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 item">
-                <div class="blog-item wow fadeInUp delay-0-2s black-120-bg ">
-                    <div class="content ">
-                        <h6><a href="project-details.php">20+ Mountain House Ideas</a></h6>
-                        <div class="image">
-                            <img src="assets/images/blog/blog-1.png" alt="Blog">
-                            <a class="hover-btn" href="project-details.php">Read More</a>
-                        </div>
-                        <ul class="blog-meta mb-16">
-                            <li>
-                                <i class="fal fa-calendar-alt"></i> 15 July 2024
-                            </li>
-                            <li>
-                                <i class="fal fa-comment-dots"></i> 1 Comment
-                            </li>
-                        </ul>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+    <section class="cta-area py-128 black-120-bg" id="contacto">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 left">
+                    <div class="section-title">
+                        <p class="category-line">COTIZACIÓN</p>
+                        <h2>Cotiza tu proyecto B2B</h2>
                     </div>
+                    <p class="mt-40">Cuéntanos ciudad, volumen estimado, tipología y tiempos. Un asesor validará requerimientos y te enviará propuesta con siguientes pasos.</p>
+                    <a class="theme-btn btn-brand mt-32" href="https://wa.me/5210000000000" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
                 </div>
-            </div>
-            <div class="col-md-4 item">
-                <div class="blog-item wow fadeInUp delay-0-2s black-120-bg ">
-                    <div class="content ">
-                        <h6><a href="project-details.php">5 Steps Bedroom Makeover</a></h6>
-                        <div class="image">
-                            <img src="assets/images/blog/blog-2.png" alt="Blog">
-                            <a class="hover-btn" href="project-details.php">Read More</a>
-                        </div>
-                        <ul class="blog-meta mb-16">
-                            <li>
-                                <i class="fal fa-calendar-alt"></i> 15 July 2024
-                            </li>
-                            <li>
-                                <i class="fal fa-comment-dots"></i> 1 Comment
-                            </li>
-                        </ul>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 item">
-                <div class="blog-item wow fadeInUp delay-0-2s black-120-bg ">
-                    <div class="content ">
-                        <h6><a href="project-details.php">Interior Design Trending Now</a></h6>
-                        <div class="image">
-                            <img src="assets/images/blog/blog-3.png" alt="Blog">
-                            <a class="hover-btn" href="project-details.php">Read More</a>
-                        </div>
-                        <ul class="blog-meta mb-16">
-                            <li>
-                                <i class="fal fa-calendar-alt"></i> 15 July 2024
-                            </li>
-                            <li>
-                                <i class="fal fa-comment-dots"></i> 1 Comment
-                            </li>
-                        </ul>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+                <div class="col-lg-6 right">
+                    <div class="contact-box">
+                        <h4 class="mb-24">Solicita tu cotización</h4>
+                        <form class="cta-form" action="#">
+                            <input type="text" required placeholder="Nombre completo">
+                            <input type="email" required placeholder="correo@empresa.com" class="mt-16">
+                            <input type="text" required placeholder="Teléfono" class="mt-16">
+                            <textarea rows="4" placeholder="Ciudad, tipo de proyecto, número de unidades, tiempos y acabados..." class="mt-16"></textarea>
+                            <button type="submit" class="theme-btn btn-brand mt-16">Enviar solicitud</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Blog Area end -->
+    </section>
+</div>
 
 <?php include './layout/layoutBottom.php' ?>

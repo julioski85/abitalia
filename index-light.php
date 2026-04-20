@@ -254,6 +254,23 @@ include './layout/layoutTop.php'
         display: block;
     }
 
+    #trabajos-recientes h2,
+    #trabajos-recientes h4,
+    #faq h2,
+    #faq .accordion-button {
+        font-family: "IvyOraDisplay-Bold", "Times New Roman", serif;
+        font-weight: 500;
+    }
+
+    #trabajos-recientes .sub-title,
+    #trabajos-recientes .category-line,
+    #faq .category-line,
+    #trabajos-recientes p,
+    #faq p,
+    #faq .accordion-body {
+        font-family: "HelveticaNeueLTStdRoman", "Helvetica", Arial, sans-serif;
+    }
+
     .abt-reveal {
         opacity: 0;
         transform: translate3d(0, 30px, 0);
@@ -275,7 +292,7 @@ include './layout/layoutTop.php'
     #por-que-abitalia .about-media-video iframe {
         width: 100%;
         height: 100%;
-        transform: scale(1.35);
+        transform: scale(2);
         transform-origin: center;
     }
 
@@ -343,22 +360,22 @@ include './layout/layoutTop.php'
 
     @keyframes timelinePulse {
         0%, 100% {
-            transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, calc(var(--timeline-scroll, 0px) * -0.16), 0) scale(1);
             opacity: 0.65;
         }
         50% {
-            transform: translate3d(6%, -4%, 0) scale(1.12);
+            transform: translate3d(6%, calc((var(--timeline-scroll, 0px) * -0.16) - 4%), 0) scale(1.12);
             opacity: 0.9;
         }
     }
 
     @keyframes timelineDrift {
         0%, 100% {
-            transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, calc(var(--timeline-scroll, 0px) * 0.2), 0) scale(1);
             opacity: 0.62;
         }
         50% {
-            transform: translate3d(-8%, -7%, 0) scale(1.08);
+            transform: translate3d(-8%, calc((var(--timeline-scroll, 0px) * 0.2) - 7%), 0) scale(1.08);
             opacity: 0.88;
         }
     }
@@ -399,7 +416,7 @@ include './layout/layoutTop.php'
         }
 
         #por-que-abitalia .about-media-video iframe {
-            transform: scale(1.12);
+            transform: scale(2);
         }
 
         .timeline-content .slick-list {
@@ -422,7 +439,7 @@ include './layout/layoutTop.php'
         }
 
         #por-que-abitalia .about-media-video iframe {
-            transform: scale(1.08);
+            transform: scale(2);
         }
 
         .floating-cta-btn {
@@ -1238,7 +1255,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var minimalFooterLetter = document.querySelector('.minimal-wise-signature .minimal-wise-letter');
 
     if (minimalFooterText) {
-        minimalFooterText.innerHTML = 'Hecho por Wise y <span aria-hidden="true">❤️</span>';
+        minimalFooterText.innerHTML = 'Hecho por Wise <span aria-hidden="true">❤️</span>';
     }
 
     if (minimalFooterLetter) {

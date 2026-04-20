@@ -268,12 +268,14 @@ include './layout/layoutTop.php'
 
     #por-que-abitalia .about-media-video {
         aspect-ratio: 32 / 9;
+        overflow: hidden;
+        border-radius: 14px;
     }
 
     #por-que-abitalia .about-media-video iframe {
         width: 100%;
         height: 100%;
-        transform: scale(2);
+        transform: scale(1.35);
         transform-origin: center;
     }
 
@@ -298,6 +300,7 @@ include './layout/layoutTop.php'
         border-radius: 50%;
         background: radial-gradient(circle, rgba(198, 40, 40, 0.28) 0%, rgba(198, 40, 40, 0) 72%);
         animation: timelinePulse 8s ease-in-out infinite;
+        transform: translate3d(0, calc(var(--timeline-scroll, 0px) * -0.16), 0);
     }
 
     .timeline-area::after {
@@ -307,6 +310,7 @@ include './layout/layoutTop.php'
         border-radius: 50%;
         background: radial-gradient(circle, rgba(229, 115, 115, 0.26) 0%, rgba(229, 115, 115, 0) 70%);
         animation: timelineDrift 12s ease-in-out infinite;
+        transform: translate3d(0, calc(var(--timeline-scroll, 0px) * 0.2), 0);
     }
 
     .timeline-area > .container {
@@ -361,26 +365,32 @@ include './layout/layoutTop.php'
 
     .floating-cta-btn {
         position: fixed;
-        right: 24px;
+        right: 88px;
         bottom: 24px;
         z-index: 1040;
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-        padding: 12px 18px;
-        border-radius: 999px;
+        justify-content: center;
+        min-height: 42px;
+        padding: 10px 20px;
+        border-radius: 0;
         color: #fff !important;
-        background: linear-gradient(135deg, var(--abt-primary) 0%, var(--abt-primary-dark) 100%);
-        box-shadow: 0 12px 28px rgba(198, 40, 40, 0.38);
-        font-size: 14px;
+        background: var(--abt-primary);
+        border: 1px solid var(--abt-primary);
+        box-shadow: 0 10px 24px rgba(143, 40, 55, 0.28);
+        font-family: "HelveticaNeueLTStdRoman", "Helvetica", Arial, sans-serif;
+        font-size: 13px;
         font-weight: 600;
-        letter-spacing: 0.02em;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
     }
 
     .floating-cta-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 14px 30px rgba(198, 40, 40, 0.48);
+        transform: translateY(-1px);
+        background: var(--abt-primary-dark);
+        border-color: var(--abt-primary-dark);
+        box-shadow: 0 12px 26px rgba(143, 40, 55, 0.34);
     }
 
     @media (max-width: 991px) {
@@ -388,17 +398,38 @@ include './layout/layoutTop.php'
             aspect-ratio: 16 / 9;
         }
 
+        #por-que-abitalia .about-media-video iframe {
+            transform: scale(1.12);
+        }
+
         .timeline-content .slick-list {
             min-height: 350px;
+        }
+
+        .floating-cta-btn {
+            right: 76px;
+            bottom: 16px;
+            padding: 10px 14px;
+            font-size: 12px;
+            letter-spacing: 0.05em;
         }
     }
 
     @media (max-width: 575px) {
+        #por-que-abitalia .about-media-video {
+            aspect-ratio: 9 / 16;
+            max-height: 72vh;
+        }
+
+        #por-que-abitalia .about-media-video iframe {
+            transform: scale(1.08);
+        }
+
         .floating-cta-btn {
-            right: 14px;
-            bottom: 14px;
-            padding: 11px 14px;
-            font-size: 13px;
+            right: 72px;
+            bottom: 12px;
+            padding: 9px 12px;
+            font-size: 11px;
         }
     }
 
@@ -697,7 +728,8 @@ include './layout/layoutTop.php'
         <div class="row mb-64 about-media">
             <div class="about-media-video">
                 <iframe
-                    src="https://www.youtube.com/embed/hAwFTqJLbzI?autoplay=1&mute=1&loop=1&playlist=hAwFTqJLbzI&controls=0&modestbranding=1&rel=0&playsinline=1"
+                    id="abitaliaVideo"
+                    src="https://www.youtube.com/embed/hAwFTqJLbzI?autoplay=1&mute=1&loop=1&playlist=hAwFTqJLbzI&controls=0&modestbranding=1&rel=0&playsinline=1&enablejsapi=1&vq=hd1080"
                     title="Video sobre Abitalia"
                     allow="autoplay; encrypted-media; picture-in-picture"
                     referrerpolicy="strict-origin-when-cross-origin"
@@ -1201,6 +1233,56 @@ include './layout/layoutTop.php'
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+    var timelineSection = document.querySelector('.timeline-area');
+    var minimalFooterText = document.querySelector('.minimal-wise-signature .minimal-wise-text');
+    var minimalFooterLetter = document.querySelector('.minimal-wise-signature .minimal-wise-letter');
+
+    if (minimalFooterText) {
+        minimalFooterText.innerHTML = 'Hecho por Wise y <span aria-hidden="true">❤️</span>';
+    }
+
+    if (minimalFooterLetter) {
+        minimalFooterLetter.style.display = 'none';
+    }
+
+    function animateTimelineBackground() {
+        if (!timelineSection) return;
+        var bounds = timelineSection.getBoundingClientRect();
+        var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        var progress = (viewportHeight - bounds.top) / (viewportHeight + bounds.height);
+        var clampedProgress = Math.max(0, Math.min(1, progress));
+        timelineSection.style.setProperty('--timeline-scroll', (clampedProgress * 180).toFixed(2) + 'px');
+    }
+
+    animateTimelineBackground();
+    window.addEventListener('scroll', animateTimelineBackground, { passive: true });
+    window.addEventListener('resize', animateTimelineBackground);
+
+    function forceBestVideoQuality() {
+        if (!window.YT || typeof window.YT.Player !== 'function') return;
+        var player = new window.YT.Player('abitaliaVideo', {
+            events: {
+                onReady: function (event) {
+                    if (typeof event.target.setPlaybackQuality === 'function') {
+                        event.target.setPlaybackQuality('hd1080');
+                    }
+                    if (typeof event.target.setPlaybackQualityRange === 'function') {
+                        event.target.setPlaybackQualityRange('highres');
+                    }
+                }
+            }
+        });
+        window.abitaliaVideoPlayer = player;
+    }
+
+    if (!window.abitaliaYouTubeApiRequested) {
+        var tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        document.head.appendChild(tag);
+        window.abitaliaYouTubeApiRequested = true;
+    }
+
+    window.onYouTubeIframeAPIReady = forceBestVideoQuality;
     const revealTargets = document.querySelectorAll(
         'section:not(#servicios) h1, section:not(#servicios) h2, section:not(#servicios) h3, section:not(#servicios) h4, section:not(#servicios) h5, section:not(#servicios) p, section:not(#servicios) li, section:not(#servicios) .card, section:not(#servicios) .counter-text-wrap, section:not(#servicios) .accordion-item, section:not(#servicios) .button, section:not(#servicios) .buttons, section:not(#servicios) img, section:not(#servicios) .carousel, section:not(#servicios) .timeline-item'
     );

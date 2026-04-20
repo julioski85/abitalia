@@ -7,8 +7,9 @@ include './layout/layoutTop.php'
 
 <style>
     :root {
-        --abt-primary: #8b2635;
-        --abt-primary-dark: #741f2c;
+        --abt-primary: #8f2837;
+        --primary-color: #8f2837;
+        --abt-primary-dark: #73202d;
         --abt-accent: #b56b73;
         --abt-overlay: rgba(0, 0, 0, 0.46);
     }
@@ -150,7 +151,7 @@ include './layout/layoutTop.php'
         scroll-behavior: smooth;
     }
 
-    #inicio, #por-que-abitalia, #servicios, #trabajos-recientes, #confianza, #faq, #contacto {
+    #inicio, #por-que-abitalia, #servicios, #trabajos-recientes, #confianza, #faq {
         scroll-margin-top: 92px;
     }
 
@@ -252,6 +253,121 @@ include './layout/layoutTop.php'
         to { transform: rotate(360deg); }
     }
 
+
+
+    .main-header .main-menu .navigation > li > a {
+        font-size: 14px;
+        padding: 10px 0;
+        letter-spacing: 0.02em;
+        transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    .main-header .main-menu .navigation > li > a:hover,
+    .main-header .main-menu .navigation > li.current > a {
+        color: var(--abt-primary);
+        transform: translateY(-1px);
+    }
+
+    .main-header .header-cta-wrap .header-quote-btn {
+        padding: 10px 22px;
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        border-radius: 999px;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    }
+
+    .main-header .header-cta-wrap .header-quote-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 24px rgba(143, 40, 55, 0.28);
+    }
+
+    .quote-modal .modal-content {
+        background: #f9f7f5;
+        border: 1px solid #ece5e0;
+        border-radius: 18px;
+        box-shadow: 0 24px 55px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+
+    .quote-modal .modal-header {
+        border-bottom: 1px solid #e9e1db;
+        padding: 26px 30px 16px;
+    }
+
+    .quote-modal .modal-title {
+        color: #141414;
+        font-size: 33px;
+        line-height: 1.2;
+    }
+
+    .quote-modal .modal-body {
+        padding: 12px 30px 30px;
+    }
+
+    .quote-modal .modal-note {
+        color: #5b5754;
+        margin-bottom: 22px;
+    }
+
+    .quote-form {
+        display: grid;
+        gap: 16px;
+    }
+
+    .quote-form .field-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #2f2d2c;
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+
+    .quote-form input,
+    .quote-form textarea {
+        width: 100%;
+        border: 1px solid #d9cdc4;
+        background: #fff;
+        border-radius: 10px;
+        padding: 14px 16px;
+        color: #1d1d1d;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .quote-form input::placeholder,
+    .quote-form textarea::placeholder {
+        color: #918b87;
+    }
+
+    .quote-form input:focus,
+    .quote-form textarea:focus {
+        border-color: var(--abt-primary);
+        box-shadow: 0 0 0 3px rgba(143, 40, 55, 0.12);
+        outline: none;
+    }
+
+    .quote-form textarea {
+        min-height: 130px;
+        resize: vertical;
+    }
+
+    .quote-form .theme-btn {
+        width: 100%;
+        border-radius: 999px;
+        padding: 13px 20px;
+        margin-top: 6px;
+    }
+
+    .quote-modal .btn-close {
+        background-size: 12px;
+        opacity: 0.8;
+    }
+
+    .modal-backdrop.show {
+        opacity: 0.58;
+    }
+
     @media (max-width: 991px) {
         .main-header .header-inner { min-height: 66px; }
         .hero-area-2 .hero-2-item { min-height: 500px; }
@@ -270,6 +386,20 @@ include './layout/layoutTop.php'
 
         .cta-area .right .image-stack .stack-item img {
             height: 220px;
+        }
+
+        .main-header .header-cta-wrap {
+            display: none;
+        }
+
+        .quote-modal .modal-header,
+        .quote-modal .modal-body {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .quote-modal .modal-title {
+            font-size: 28px;
         }
     }
 </style>
@@ -293,7 +423,7 @@ include './layout/layoutTop.php'
                         <h1 class="text-white">Diseño y fabricación de mobiliario<br> para proyectos en todo México</h1>
                         <div class="buttons mt-96">
                             <a class="theme-btn" href="#trabajos-recientes">Ver Proyectos</a>
-                            <a class="light-btn" href="#contacto">Cotizar ahora</a>
+                            <a class="light-btn js-open-quote-modal" href="#" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar ahora</a>
                         </div>
                     </div>
                     <div class="col-md-1 rotate follow">
@@ -319,7 +449,7 @@ include './layout/layoutTop.php'
                         <h1 class="text-white">Manufactura moderna para cocinas,<br> closets y baños de alto nivel</h1>
                         <div class="buttons mt-96">
                             <a class="theme-btn" href="#trabajos-recientes">Ver Proyectos</a>
-                            <a class="light-btn" href="#contacto">Cotizar ahora</a>
+                            <a class="light-btn js-open-quote-modal" href="#" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar ahora</a>
                         </div>
                     </div>
                     <div class="col-md-1 rotate follow">
@@ -345,7 +475,7 @@ include './layout/layoutTop.php'
                         <h1 class="text-white">Escalabilidad, control de calidad<br> y entregas por fases</h1>
                         <div class="buttons mt-96">
                             <a class="theme-btn" href="#trabajos-recientes">Ver Proyectos</a>
-                            <a class="light-btn" href="#contacto">Cotizar ahora</a>
+                            <a class="light-btn js-open-quote-modal" href="#" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar ahora</a>
                         </div>
                     </div>
                     <div class="col-md-1 rotate follow">
@@ -428,7 +558,7 @@ include './layout/layoutTop.php'
                     </div>
                 </div>
                 <div class="button">
-                    <a class="theme-btn" href="contact-light.php">Cotiza tu proyecto</a>
+                    <a class="theme-btn js-open-quote-modal" href="#" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotiza tu proyecto</a>
                 </div>
             </div>
         </div>
@@ -884,7 +1014,7 @@ include './layout/layoutTop.php'
                 <h2 class="wow fadeInUp delay-0-2s">Un flujo claro para ejecutar con precisión</h2>
             </div>
             <div class="button col-sm-5 col-lg-5">
-                <a class="theme-btn" href="contact-light.php">Cotiza tu proyecto</a>
+                <a class="theme-btn js-open-quote-modal" href="#" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotiza tu proyecto</a>
             </div>
         </div>
         <div class="row gap-64 align-items-center">
@@ -1068,50 +1198,6 @@ include './layout/layoutTop.php'
 </section>
 <!-- Reviews Area end -->
 
-<!-- CTA Area start -->
-<section id="contacto" class="cta-area py-128 black-120-bg">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-sm-12 col-lg-6 left wow fadeInUp delay-0-2s">
-                <div class="section-title">
-                    <p class="category-line">COTIZACIÓN</p>
-                    <h2 class="wow fadeInUp delay-0-2s">¿Listo para cotizar tu proyecto?</h2>
-                </div>
-                <p class="mt-96">Cuéntanos el tipo de proyecto y volumen estimado. Un asesor te contactará para aterrizar requerimientos y logística.</p>
-                <form class="cta-form" action="#">
-                    <div class="field-group">
-                        <label for="cta-name">Nombre</label>
-                        <input id="cta-name" type="text" required placeholder="Tu nombre">
-                    </div>
-                    <div class="field-group">
-                        <label for="cta-email">Email</label>
-                        <input id="cta-email" type="email" required placeholder="correo@empresa.com">
-                    </div>
-                    <div class="field-group">
-                        <label for="cta-phone">Teléfono</label>
-                        <input id="cta-phone" type="tel" required placeholder="+52 ...">
-                    </div>
-                    <div class="field-group">
-                        <label for="cta-project">Sobre el proyecto</label>
-                        <textarea id="cta-project" placeholder="Cuéntanos sobre tu proyecto"></textarea>
-                    </div>
-                    <button type="submit" class="theme-btn">Enviar solicitud</button>
-                </form>
-            </div>
-            <div class="col-sm-12 col-lg-6 right wow fadeInUp delay-0-2s">
-                <div class="row image-stack">
-                    <div class="col-sm-6 wow fadeInUp delay-0-2s stack-item">
-                        <img src="assets/images/abatilia/gallery-bano.jpeg" alt="Proyecto baño">
-                    </div>
-                    <div class="col-sm-6 wow fadeInUp delay-0-2s stack-item">
-                        <img src="assets/images/abatilia/gallery-closet.jpg" alt="Proyecto closet">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- CTA Area end -->
 
 <!-- FAQ Area start -->
 <section id="faq" class="faq-area py-128 black-100-bg">
@@ -1147,6 +1233,42 @@ include './layout/layoutTop.php'
                             </div>
                         </div>
                     </div>
+                    <div class="accordion-item">
+                        <h5 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                ¿Qué capacidad tienen para atender proyectos B2B en diferentes ciudades?
+                            </button>
+                        </h5>
+                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionFaq">
+                            <div class="accordion-body">
+                                Coordinamos fabricación, embarques y montaje por fases para proyectos multiciudad. Definimos un plan logístico y de instalación por frente para mantener continuidad operativa.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h5 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                ¿Cómo aseguran calidad y consistencia en pedidos de alto volumen?
+                            </button>
+                        </h5>
+                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionFaq">
+                            <div class="accordion-body">
+                                Trabajamos con especificaciones homologadas, control de proceso y validaciones por lote. Así garantizamos que acabados, herrajes y medidas se mantengan consistentes en todo el desarrollo.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h5 class="accordion-header" id="heading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                ¿Cuánto tarda una cotización y qué nivel de detalle incluye?
+                            </button>
+                        </h5>
+                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionFaq">
+                            <div class="accordion-body">
+                                Después de recibir información completa del proyecto, entregamos una propuesta con alcance, tiempos estimados y supuestos logísticos. El nivel de detalle se ajusta a tu etapa de decisión.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6 image">
@@ -1156,5 +1278,41 @@ include './layout/layoutTop.php'
     </div>
 </section>
 <!-- FAQ Area end -->
+
+
+<!-- Quote Modal start -->
+<div class="modal fade quote-modal" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="quoteModalLabel">Cotiza tu proyecto</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-note">Compártenos la información clave y un asesor comercial te contactará para validar alcances, tiempos y logística.</p>
+                <form class="quote-form" action="#">
+                    <div class="field-group">
+                        <label for="quote-name">Nombre</label>
+                        <input id="quote-name" type="text" required placeholder="Tu nombre">
+                    </div>
+                    <div class="field-group">
+                        <label for="quote-email">Email</label>
+                        <input id="quote-email" type="email" required placeholder="correo@empresa.com">
+                    </div>
+                    <div class="field-group">
+                        <label for="quote-phone">Teléfono</label>
+                        <input id="quote-phone" type="tel" required placeholder="+52 ...">
+                    </div>
+                    <div class="field-group">
+                        <label for="quote-project">Sobre el proyecto</label>
+                        <textarea id="quote-project" required placeholder="Cuéntanos sobre tu proyecto"></textarea>
+                    </div>
+                    <button type="submit" class="theme-btn">Enviar solicitud</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Quote Modal end -->
 
 <?php include './layout/layoutBottom.php' ?>

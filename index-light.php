@@ -559,7 +559,15 @@ include './layout/layoutTop.php'
             </div>
         </div>
         <div class="row mb-64 about-media">
-            <img src="assets/images/abatilia/gallery-bano.jpeg" alt="imagen sobre Abitalia">
+            <div class="about-media-video">
+                <iframe
+                    src="https://www.youtube.com/embed/hAwFTqJLbzI?autoplay=1&mute=1&loop=1&playlist=hAwFTqJLbzI&controls=0&modestbranding=1&rel=0&playsinline=1"
+                    title="Video sobre Abitalia"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
         <div class="row gap-64">
             <div class="col-md-12 col-lg-6">
@@ -631,7 +639,7 @@ include './layout/layoutTop.php'
     <div class="container">
         <div class="d-flex section-heading mb-96">
             <div class="section-title">
-                <h2 class="wow fadeInUp delay-0-2s">Servicios</h2>
+                <h2>Servicios</h2>
             </div>
             <div class="carousel-buttons">
                 <button class="prev" type="button" data-bs-target="#service2Carousel" data-bs-slide="prev">
@@ -642,7 +650,7 @@ include './layout/layoutTop.php'
                 </button>
             </div>
         </div>
-        <div class="carousel slide" id="service2Carousel" data-bs-ride="carousel">
+        <div class="carousel" id="service2Carousel" data-bs-ride="carousel">
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <div class="col-12 col-md-4 item">
@@ -705,7 +713,7 @@ include './layout/layoutTop.php'
     <div class="container-fluid pl-96 pr-96">
         <div class="pro-items">
             <div class="card">
-                <div class="row wow fadeInLeft delay-0-1s">
+                <div class="row">
                     <a href="project-details-light.php"><img src="assets/images/abatilia/gallery-closet.jpg" alt="Proyecto de closets residenciales"></a>
                 </div>
                 <div class="project-home3-content">
@@ -716,7 +724,7 @@ include './layout/layoutTop.php'
                 </div>
             </div>
             <div class="card">
-                <div class="row wow fadeInLeft delay-0-1s">
+                <div class="row">
                     <a href="project-details-light.php"><img src="assets/images/abatilia/gallery-bano.jpeg" alt="Proyecto de baños en desarrollo vertical"></a>
                 </div>
                 <div class="project-home3-content">
@@ -727,7 +735,7 @@ include './layout/layoutTop.php'
                 </div>
             </div>
             <div class="card">
-                <div class="row wow fadeInLeft delay-0-1s">
+                <div class="row">
                     <a href="project-details-light.php"><img src="assets/images/abatilia/ima4.jpg" alt="Proyecto de cocinas para complejo habitacional"></a>
                 </div>
                 <div class="project-home3-content">
@@ -740,7 +748,7 @@ include './layout/layoutTop.php'
         </div>
         <div class="pro-items mt-96">
             <div class="card">
-                <div class="row wow fadeInLeft delay-0-1s">
+                <div class="row">
                     <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="Proyecto de equipamiento para departamentos"></a>
                 </div>
                 <div class="project-home3-content">
@@ -751,7 +759,7 @@ include './layout/layoutTop.php'
                 </div>
             </div>
             <div class="card">
-                <div class="row wow fadeInLeft delay-0-1s">
+                <div class="row">
                     <a href="project-details-light.php"><img src="assets/images/abatilia/ima2.png" alt="Proyecto de fabricación seriada de mobiliario"></a>
                 </div>
                 <div class="project-home3-content">
@@ -762,7 +770,7 @@ include './layout/layoutTop.php'
                 </div>
             </div>
             <div class="card">
-                <div class="row wow fadeInLeft delay-0-1s">
+                <div class="row">
                     <a href="project-details-light.php"><img src="assets/images/abatilia/hero.jpeg" alt="Proyecto de instalación final de mobiliario"></a>
                 </div>
                 <div class="project-home3-content">

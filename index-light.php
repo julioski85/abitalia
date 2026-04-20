@@ -273,7 +273,7 @@ include './layout/layoutTop.php'
     #por-que-abitalia .about-media-video iframe {
         width: 100%;
         height: 100%;
-        transform: scale(1.22);
+        transform: scale(2);
         transform-origin: center;
     }
 

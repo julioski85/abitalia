@@ -7,15 +7,16 @@ include './layout/layoutTop.php'
 
 <style>
     :root {
-        --abt-primary: #315f4b;
-        --abt-accent: #a34a52;
-        --abt-overlay: rgba(0, 0, 0, 0.28);
+        --abt-primary: #8b2635;
+        --abt-primary-dark: #741f2c;
+        --abt-accent: #b56b73;
+        --abt-overlay: rgba(0, 0, 0, 0.46);
     }
 
     .hero-area h1, .hero-area-2 h1, .about-area h2, .about-area-2 h1, .service-area h2, .service-area-2 h2, .homeproject-area h2, .interior-area h2, .timeline-area h2, .reviews-area h2, .cta-area h2, .faq-area h2,
     .service-area h6, .service-area-2 h5, .homeproject-area h4, .interior-area h4, .timeline-area .title, .faq-area h5 {
         font-family: "IvyOraDisplay-Bold", "Times New Roman", serif;
-        font-weight: 600;
+        font-weight: 500;
     }
 
     body, p, span, a, li, input, button, textarea, label, .category-line, .sub-title {
@@ -37,19 +38,33 @@ include './layout/layoutTop.php'
     .timeline-area .icon, .faq-area .accordion-button:not(.collapsed)::after { border-color: var(--abt-primary) !important; }
 
     .main-header .header-upper .container { max-width: 1240px; }
-    .main-header .header-inner { min-height: 86px; padding: 8px 0; }
-    .main-header .logo img { max-height: 50px; width: auto; }
+    .main-header .header-inner { min-height: 72px; padding: 5px 0; }
+    .main-header .logo img { max-height: 42px; width: auto; }
 
     .hero-area-2 .hero-2-item {
-        min-height: 760px;
+        min-height: 610px;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-area-2 .hero-2-item::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.30) 100%);
+    }
+
+    .hero-area-2 .hero-2-item > .container-fluid {
+        position: relative;
+        z-index: 1;
     }
 
     .about-area-2 .about-media img {
         width: 100%;
-        height: 420px;
+        height: 330px;
         object-fit: cover;
         object-position: center;
     }
@@ -61,7 +76,7 @@ include './layout/layoutTop.php'
     }
 
     .service-area-2 .item > a img {
-        height: 340px;
+        height: 280px;
         object-fit: cover;
         object-position: center;
     }
@@ -92,7 +107,7 @@ include './layout/layoutTop.php'
     }
 
     .cta-area .right .pt-96 img {
-        height: 360px;
+        height: 280px;
         object-position: center 30%;
     }
 
@@ -118,33 +133,149 @@ include './layout/layoutTop.php'
     }
 
     .cta-form textarea {
-        min-height: 132px;
+        min-height: 160px;
         resize: vertical;
     }
 
     .faq-area .image img {
         width: 100%;
-        height: 580px;
+        height: 640px;
         object-fit: cover;
         object-position: center;
     }
 
+    
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    #inicio, #por-que-abitalia, #servicios, #trabajos-recientes, #confianza, #faq, #contacto {
+        scroll-margin-top: 92px;
+    }
+
+    .hero-area-2 .buttons .light-btn,
+    .theme-btn,
+    .primary-readmore {
+        color: #fff !important;
+    }
+
+    .theme-btn:hover,
+    .theme-btn:focus,
+    .primary-readmore:hover,
+    .primary-readmore:focus {
+        background-color: var(--abt-primary-dark) !important;
+        border-color: var(--abt-primary-dark) !important;
+        color: #fff !important;
+    }
+
+    .hero-area-2 .buttons .light-btn {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.45);
+    }
+
+    .hero-area-2 .buttons .light-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .homeproject-area .apartment-image img,
+    .timeline-area .timeline-images img,
+    .interior-area .interior-act img,
+    .cta-area .right img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .cta-area .left {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 42px;
+    }
+
+    .cta-area .left p.mt-96 {
+        margin-top: 28px !important;
+    }
+
+    .cta-form .field-group {
+        margin-bottom: 16px;
+    }
+
+    .cta-form input,
+    .cta-form textarea {
+        border-radius: 8px;
+    }
+
+    .cta-form input::placeholder,
+    .cta-form textarea::placeholder {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .cta-area .right .image-stack {
+        gap: 20px;
+    }
+
+    .cta-area .right .image-stack .stack-item {
+        padding: 0;
+    }
+
+    .cta-area .right .image-stack .stack-item img {
+        border-radius: 14px;
+        height: 260px;
+    }
+
+    .reviews-area {
+        background-image: url(assets/images/abatilia/hero.jpeg) !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .faq-area .accordion-item {
+        margin-bottom: 14px;
+    }
+
+    .preloader {
+        background: #111;
+    }
+
+    .custom-loader {
+        width: 44px;
+        height: 44px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-top-color: var(--abt-primary);
+        border-radius: 50%;
+        animation: spinPreloader 0.8s linear infinite;
+    }
+
+    @keyframes spinPreloader {
+        to { transform: rotate(360deg); }
+    }
+
     @media (max-width: 991px) {
-        .main-header .header-inner { min-height: 74px; }
-        .hero-area-2 .hero-2-item { min-height: 620px; }
+        .main-header .header-inner { min-height: 66px; }
+        .hero-area-2 .hero-2-item { min-height: 500px; }
         .about-area-2 .about-media img,
         .service-area-2 .item > a img,
         .faq-area .image img,
         .cta-area .right .pt-96 img,
         .cta-area .right img {
             height: auto;
-            min-height: 260px;
+            min-height: 240px;
+        }
+
+        .cta-area .left {
+            padding: 28px;
+        }
+
+        .cta-area .right .image-stack .stack-item img {
+            height: 220px;
         }
     }
 </style>
 
 <!-- Hero Section Start -->
-<section class="hero-area-2 black-120-bg">
+<section id="inicio" class="hero-area-2 black-120-bg">
     <div class="hero-2-slider wow fadeInUp delay-0-4s">
         <div class="hero-2-item justify-content-center py-96" style="background-image: url(assets/images/abatilia/hero.jpeg);">
             <div class="container-fluid">
@@ -161,8 +292,8 @@ include './layout/layoutTop.php'
                     <div class="col-md-10 text-center">
                         <h1 class="text-white">Diseño y fabricación de mobiliario<br> para proyectos en todo México</h1>
                         <div class="buttons mt-96">
-                            <a class="theme-btn" href="projects.php">Ver Proyectos</a>
-                            <a class="light-btn" href="contact-light.php">Cotizar ahora</a>
+                            <a class="theme-btn" href="#trabajos-recientes">Ver Proyectos</a>
+                            <a class="light-btn" href="#contacto">Cotizar ahora</a>
                         </div>
                     </div>
                     <div class="col-md-1 rotate follow">
@@ -187,8 +318,8 @@ include './layout/layoutTop.php'
                     <div class="col-md-10 text-center">
                         <h1 class="text-white">Manufactura moderna para cocinas,<br> closets y baños de alto nivel</h1>
                         <div class="buttons mt-96">
-                            <a class="theme-btn" href="projects.php">Ver Proyectos</a>
-                            <a class="light-btn" href="contact-light.php">Cotizar ahora</a>
+                            <a class="theme-btn" href="#trabajos-recientes">Ver Proyectos</a>
+                            <a class="light-btn" href="#contacto">Cotizar ahora</a>
                         </div>
                     </div>
                     <div class="col-md-1 rotate follow">
@@ -213,8 +344,8 @@ include './layout/layoutTop.php'
                     <div class="col-md-10 text-center">
                         <h1 class="text-white">Escalabilidad, control de calidad<br> y entregas por fases</h1>
                         <div class="buttons mt-96">
-                            <a class="theme-btn" href="projects.php">Ver Proyectos</a>
-                            <a class="light-btn" href="contact-light.php">Cotizar ahora</a>
+                            <a class="theme-btn" href="#trabajos-recientes">Ver Proyectos</a>
+                            <a class="light-btn" href="#contacto">Cotizar ahora</a>
                         </div>
                     </div>
                     <div class="col-md-1 rotate follow">
@@ -229,7 +360,7 @@ include './layout/layoutTop.php'
 <!-- Hero Section End -->
 
 <!-- About Area start -->
-<section class="about-area-2 py-128 black-100-bg">
+<section id="por-que-abitalia" class="about-area-2 py-128 black-100-bg">
     <div class="container">
         <div class="d-flex section-heading mb-64">
             <div class="section-title">
@@ -306,11 +437,11 @@ include './layout/layoutTop.php'
 <!-- About Area end -->
 
 <!-- Service Section Start -->
-<section class="service-area-2 black-120-bg py-128">
+<section id="servicios" class="service-area-2 black-120-bg py-128">
     <div class="container">
         <div class="d-flex section-heading mb-96">
             <div class="section-title">
-                <h2 class="wow fadeInUp delay-0-2s">Services</h2>
+                <h2 class="wow fadeInUp delay-0-2s">Servicios</h2>
             </div>
             <div class="carousel-buttons">
                 <button class="prev" type="button" data-bs-target="#service2Carousel" data-bs-slide="prev">
@@ -372,7 +503,7 @@ include './layout/layoutTop.php'
 <!-- Services Section End -->
 
 <!-- Home Projects Area start -->
-<section class="homeproject-area py-128">
+<section id="trabajos-recientes" class="homeproject-area py-128">
     <div class="container">
         <div class="row rel z-1 justify-content-center">
             <div class="section-title text-center mb-96 wow fadeInUp delay-0-2s">
@@ -825,7 +956,7 @@ include './layout/layoutTop.php'
 </section>
 
 <!-- Reviews Area start -->
-<section class="reviews-area py-128 black-100-bg" style="background-image: url(assets/images/abatilia/ima4.jpg);">
+<section id="confianza" class="reviews-area py-128 black-100-bg">
     <div class="container">
         <div class="d-flex section-heading mb-96">
             <div class="section-title">
@@ -938,7 +1069,7 @@ include './layout/layoutTop.php'
 <!-- Reviews Area end -->
 
 <!-- CTA Area start -->
-<section class="cta-area py-128 black-120-bg">
+<section id="contacto" class="cta-area py-128 black-120-bg">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-sm-12 col-lg-6 left wow fadeInUp delay-0-2s">
@@ -962,18 +1093,18 @@ include './layout/layoutTop.php'
                     </div>
                     <div class="field-group">
                         <label for="cta-project">Sobre el proyecto</label>
-                        <textarea id="cta-project" placeholder="Comparte volumen, ubicación y tiempos estimados"></textarea>
+                        <textarea id="cta-project" placeholder="Cuéntanos sobre tu proyecto"></textarea>
                     </div>
                     <button type="submit" class="theme-btn">Enviar solicitud</button>
                 </form>
             </div>
             <div class="col-sm-12 col-lg-6 right wow fadeInUp delay-0-2s">
-                <div class="row">
-                    <div class="col-sm-6 wow fadeInUp delay-0-2s pt-96">
-                        <img src="assets/images/abatilia/gallery-bano.jpeg" alt="Timeline">
+                <div class="row image-stack">
+                    <div class="col-sm-6 wow fadeInUp delay-0-2s stack-item">
+                        <img src="assets/images/abatilia/gallery-bano.jpeg" alt="Proyecto baño">
                     </div>
-                    <div class="col-sm-6 wow fadeInUp delay-0-2s">
-                        <img src="assets/images/abatilia/gallery-closet.jpg" alt="Timeline">
+                    <div class="col-sm-6 wow fadeInUp delay-0-2s stack-item">
+                        <img src="assets/images/abatilia/gallery-closet.jpg" alt="Proyecto closet">
                     </div>
                 </div>
             </div>
@@ -983,11 +1114,11 @@ include './layout/layoutTop.php'
 <!-- CTA Area end -->
 
 <!-- FAQ Area start -->
-<section class="faq-area py-128 black-100-bg">
+<section id="faq" class="faq-area py-128 black-100-bg">
     <div class="container">
         <div class="section-title mb-96">
             <p class="category-line">FAQ</p>
-            <h2 class="wow fadeInUp delay-0-2s">Frequently Asked Questions</h2>
+            <h2 class="wow fadeInUp delay-0-2s">Preguntas frecuentes</h2>
         </div>
         <div class="row align-items-center">
             <div class=" col-lg-6 faq">
@@ -1013,18 +1144,6 @@ include './layout/layoutTop.php'
                         <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionFaq">
                             <div class="accordion-body">
                                 Desde la etapa de planeación. Involucrarnos temprano mejora la coordinación con arquitectura y obra, reduce ajustes tardíos y brinda mayor control sobre tiempos y costos.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h5 class="accordion-header" id="heading3">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                ¿Cuánto tiempo tarda la fabricación e instalación?
-                            </button>
-                        </h5>
-                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionFaq">
-                            <div class="accordion-body">
-                                Depende del volumen y del nivel de personalización. Definimos tiempos por frente de trabajo y entregas parciales para mantener el avance de obra sin detener otras partidas.
                             </div>
                         </div>
                     </div>

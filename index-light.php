@@ -266,7 +266,7 @@ include './layout/layoutTop.php'
         font-size: 13px;
         letter-spacing: 0.06em;
         text-transform: uppercase;
-        border-radius: 999px;
+        border-radius: 0;
         transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
     }
 
@@ -347,7 +347,7 @@ include './layout/layoutTop.php'
 
     .quote-form .theme-btn {
         width: 100%;
-        border-radius: 999px;
+        border-radius: 0;
         padding: 13px 20px;
         margin-top: 6px;
     }
@@ -659,8 +659,8 @@ include './layout/layoutTop.php'
     <div class="container">
         <div class="row rel z-1 justify-content-center">
             <div class="section-title text-center mb-96 wow fadeInUp delay-0-2s">
-                <span class="sub-title mb-16">GALERÍA</span>
-                <h2>Trabajos Recientes</h2>
+                <span class="sub-title mb-16">PROJECTS</span>
+                <h2>Latest Works</h2>
             </div>
         </div>
         <ul class="project-filter tab-style-one justify-content-center nav nav-pills nav-fill mb-96 wow fadeInUp delay-0-4s">
@@ -772,8 +772,8 @@ include './layout/layoutTop.php'
     <div class="container-fluid">
         <div class="container rel z-1 justify-content-center text-center">
             <div class="text-center mb-96 wow fadeInUp delay-0-2s">
-                <span class="sub-title mb-16">GALERÍA</span>
-                <h2>Trabajos Recientes</h2>
+                <span class="sub-title mb-16">PROJECTS</span>
+                <h2>Latest Works</h2>
             </div>
         </div>
         <div class="container section-heading">
@@ -1276,18 +1276,6 @@ include './layout/layoutTop.php'
                         <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionFaq">
                             <div class="accordion-body">
                                 Trabajamos con especificaciones homologadas, control de proceso y validaciones por lote. Así garantizamos que acabados, herrajes y medidas se mantengan consistentes en todo el desarrollo.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h5 class="accordion-header" id="heading5">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                ¿Cuánto tarda una cotización y qué nivel de detalle incluye?
-                            </button>
-                        </h5>
-                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionFaq">
-                            <div class="accordion-body">
-                                Después de recibir información completa del proyecto, entregamos una propuesta con alcance, tiempos estimados y supuestos logísticos. El nivel de detalle se ajusta a tu etapa de decisión.
                             </div>
                         </div>
                     </div>

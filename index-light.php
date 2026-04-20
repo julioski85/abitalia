@@ -7,10 +7,10 @@ include './layout/layoutTop.php'
 
 <style>
     :root {
-        --abt-primary: #8f2837;
-        --primary-color: #8f2837;
-        --abt-primary-dark: #73202d;
-        --abt-accent: #b56b73;
+        --abt-primary: #c62828;
+        --primary-color: #c62828;
+        --abt-primary-dark: #8e1b1b;
+        --abt-accent: #e57373;
         --abt-overlay: rgba(0, 0, 0, 0.46);
     }
 

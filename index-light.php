@@ -236,6 +236,44 @@ include './layout/layoutTop.php'
         margin-bottom: 14px;
     }
 
+    #trabajos-recientes .card {
+        overflow: hidden;
+        border: 0;
+        background: transparent;
+    }
+
+    #trabajos-recientes .card .row {
+        margin: 0;
+    }
+
+    #trabajos-recientes .card a img {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    .abt-reveal {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        will-change: opacity, transform;
+    }
+
+    .abt-reveal.is-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .abt-reveal {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+    }
+
     .main-header .main-menu .navigation > li > a {
         font-size: 14px;
         padding: 10px 0;
@@ -668,70 +706,70 @@ include './layout/layoutTop.php'
         <div class="pro-items">
             <div class="card">
                 <div class="row wow fadeInLeft delay-0-1s">
-                    <a href="project-details-light.php"><img src="assets/images/architecture-projects/hpr4.jpg" alt="Proyecto residencial"></a>
+                    <a href="project-details-light.php"><img src="assets/images/abatilia/gallery-closet.jpg" alt="Proyecto de closets residenciales"></a>
                 </div>
                 <div class="project-home3-content">
                     <a href="project-details-light.php">
-                        <h4>Diseño de villa</h4>
+                        <h4>Closets a medida para torre residencial</h4>
                     </a>
-                    <p class="category-line">ARQUITECTURA</p>
+                    <p class="category-line">MOBILIARIO RESIDENCIAL</p>
                 </div>
             </div>
             <div class="card">
                 <div class="row wow fadeInLeft delay-0-1s">
-                    <a href="project-details-light.php"><img src="assets/images/architecture-projects/hpr2-1.png" alt="Proyecto de interior"></a>
+                    <a href="project-details-light.php"><img src="assets/images/abatilia/gallery-bano.jpeg" alt="Proyecto de baños en desarrollo vertical"></a>
                 </div>
                 <div class="project-home3-content">
                     <a href="project-details-light.php">
-                        <h4>Casa moderna</h4>
+                        <h4>Paquete integral de baños premium</h4>
                     </a>
-                    <p class="category-line">INTERIORISMO</p>
+                    <p class="category-line">BAÑOS</p>
                 </div>
             </div>
             <div class="card">
                 <div class="row wow fadeInLeft delay-0-1s">
-                    <a href="project-details-light.php"><img src="assets/images/architecture-projects/hpr2-4.jpg" alt="Proyecto en montaña"></a>
+                    <a href="project-details-light.php"><img src="assets/images/abatilia/ima4.jpg" alt="Proyecto de cocinas para complejo habitacional"></a>
                 </div>
                 <div class="project-home3-content">
                     <a href="project-details-light.php">
-                        <h4>Casa de montaña</h4>
+                        <h4>Cocinas contemporáneas por etapas</h4>
                     </a>
-                    <p class="category-line">PAISAJISMO</p>
+                    <p class="category-line">COCINAS</p>
                 </div>
             </div>
         </div>
         <div class="pro-items mt-96">
             <div class="card">
                 <div class="row wow fadeInLeft delay-0-1s">
-                    <a href="project-details-light.php"><img src="assets/images/architecture-projects/hpr2-3.png" alt="Proyecto de renovación"></a>
+                    <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="Proyecto de equipamiento para departamentos"></a>
                 </div>
                 <div class="project-home3-content">
                     <a href="project-details-light.php">
-                        <h4>Renovación de vivienda</h4>
+                        <h4>Equipamiento de departamentos muestra</h4>
                     </a>
-                    <p class="category-line">REMODELACIÓN</p>
+                    <p class="category-line">SHOWROOM</p>
                 </div>
             </div>
             <div class="card">
                 <div class="row wow fadeInLeft delay-0-1s">
-                    <a href="project-details-light.php"><img src="assets/images/architecture-projects/hpr2-6.jpg" alt="Diseño de cocina"></a>
+                    <a href="project-details-light.php"><img src="assets/images/abatilia/ima2.png" alt="Proyecto de fabricación seriada de mobiliario"></a>
                 </div>
                 <div class="project-home3-content">
                     <a href="project-details-light.php">
-                        <h4>Diseño de cocina</h4>
+                        <h4>Fabricación seriada para master plan</h4>
                     </a>
-                    <p class="category-line">INTERIORISMO</p>
+                    <p class="category-line">PRODUCCIÓN B2B</p>
                 </div>
             </div>
             <div class="card">
                 <div class="row wow fadeInLeft delay-0-1s">
-                    <a href="project-details-light.php"><img src="assets/images/architecture-projects/hpr2-5.png" alt="Diseño de casa"></a>
+                    <a href="project-details-light.php"><img src="assets/images/abatilia/hero.jpeg" alt="Proyecto de instalación final de mobiliario"></a>
                 </div>
                 <div class="project-home3-content">
                     <a href="project-details-light.php">
-                        <h4>Diseño de casa</h4>
+                        <h4>Instalación final con control de calidad</h4>
                     </a>
-                    <p class="category-line">ARQUITECTURA</p>
+                    <p class="category-line">ENTREGA Y MONTAJE</p>
                 </div>
             </div>
         </div>
@@ -1038,5 +1076,31 @@ include './layout/layoutTop.php'
     </div>
 </div>
 <!-- Quote Modal end -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const revealTargets = document.querySelectorAll(
+        'section h1, section h2, section h3, section h4, section h5, section p, section li, section .card, section .counter-text-wrap, section .accordion-item, section .button, section .buttons, section img, section .carousel, section .timeline-item'
+    );
+
+    revealTargets.forEach(function (element, index) {
+        element.classList.add('abt-reveal');
+        element.style.transitionDelay = Math.min(index % 8, 7) * 0.08 + 's';
+    });
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.16, rootMargin: '0px 0px -60px 0px' });
+
+    revealTargets.forEach(function (element) {
+        observer.observe(element);
+    });
+});
+</script>
 
 <?php include './layout/layoutBottom.php' ?>

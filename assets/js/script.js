@@ -119,6 +119,17 @@
             }
         });
 
+        // ## Quote Modal Layering/Focusing
+        if ($('#quoteModal').length) {
+            var $quoteModal = $('#quoteModal');
+            if (!$quoteModal.parent().is('body')) {
+                $quoteModal.appendTo('body');
+            }
+            $quoteModal.on('shown.bs.modal', function () {
+                $(this).find('input, textarea').first().trigger('focus');
+            });
+        }
+
         // Hero 2 Slider
         if ($('.hero-2-slider').length) {
             $('.hero-2-slider').slick({
@@ -433,6 +444,5 @@
 
 
     
-
 
 

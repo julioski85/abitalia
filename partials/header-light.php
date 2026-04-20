@@ -5,7 +5,8 @@
          <div class="container clearfix">
              <div class="header-inner rel d-flex align-items-center">
                  <div class="logo-outer">
-                     <div class="logo"><a href="index-light.php"><img src="assets/images/abatilia/logo.png" alt="Logo" title="Logo"></a></div>
+                     <?php $lightLogo = isset($customLightLogo) ? $customLightLogo : "assets/images/abatilia/logo.png"; ?>
+                    <div class="logo"><a href="index-light.php"><img src="<?php echo $lightLogo; ?>" alt="Logo" title="Logo"></a></div>
                  </div>
 
                  <div class="nav-outer ms-auto clearfix">
@@ -14,7 +15,7 @@
                          <div class="navbar-header py-10">
                              <div class="mobile-logo">
                                  <a href="index-light.php">
-                                     <img src="assets/images/abatilia/logo.png" alt="Logo" title="Logo">
+                                     <img src="<?php echo $lightLogo; ?>" alt="Logo" title="Logo">
                                  </a>
                              </div>
 

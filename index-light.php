@@ -1,9 +1,12 @@
-<?php $lightMode = true;
-include './layout/layoutTop.php' ?>
+<?php
+$lightMode = true;
+$customLightLogo = 'assets/images/abatilia/logo (3) negro.png';
+include './layout/layoutTop.php'
+?>
 
 <style>
-    .hero-area h1, .about-area h2, .service-area h2, .homeproject-area h2, .interior-area h2, .timeline-area h2, .reviews-area h2, .cta-area h2, .blog-area h2,
-    .service-area h6, .homeproject-area h4, .interior-area h4, .timeline-area .title, .blog-area h6 {
+    .hero-area h1, .hero-area-2 h1, .about-area h2, .about-area-2 h1, .service-area h2, .service-area-2 h2, .homeproject-area h2, .interior-area h2, .timeline-area h2, .reviews-area h2, .cta-area h2, .faq-area h2,
+    .service-area h6, .service-area-2 h5, .homeproject-area h4, .interior-area h4, .timeline-area .title, .faq-area h5 {
         font-family: "IvyOraDisplay-Bold", "Times New Roman", serif;
     }
     body, p, span, a, li, input, button, .category-line, .sub-title {
@@ -20,48 +23,82 @@ include './layout/layoutTop.php' ?>
 </style>
 
 <!-- Hero Section Start -->
-<section class="hero-area black-120-bg">
-    <div class="carousel slide" id="recipeCarousel" data-bs-ride="carousel">
-        <div class=" carousel-inner" role="listbox">
-            <div class="carousel-item active" style="background-image: url(assets/images/abatilia/hero.jpeg);">
-                <div class="container pt-64 pb-64">
-                    <p class="text-white category-line category-hero">TODO MÉXICO</p>
-                    <h1 class="col-lg-10 text-white">Diseño y fabricación de mobiliario para tus proyectos</h1>
-                    <div class="row pt-32">
-                        <div class="carousel-buttons col-6">
-                            <button class="prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                            </button>
-                            <button class="" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                            </button>
+<section class="hero-area-2 black-120-bg">
+    <div class="hero-2-slider wow fadeInUp delay-0-4s">
+        <div class="hero-2-item justify-content-center py-96" style="background-image: url(assets/images/abatilia/hero.jpeg);">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-center pb-96">
+                    <div class="col-md-1 rotate phone">
+                        <div class="d-flex">
+                            <i class="fa fa-phone"></i>
+                            <div>
+                                <p class="phone-title">Atención comercial</p>
+                                <a class="number" href="tel:+528118188113">(+52) 81 1818 8113</a>
+                            </div>
                         </div>
-                        <div class="small-img col-6">
-                            <a href="project-details-light.php">
-                                <img class="hero-img wow zoomIn" src="assets/images/abatilia/ima1.png" alt="hero image" title="hero image">
-                            </a>
+                    </div>
+                    <div class="col-md-10 text-center">
+                        <h1 class="text-white">Diseño y fabricación de mobiliario<br> para proyectos en todo México</h1>
+                        <div class="buttons mt-96">
+                            <a class="theme-btn" href="projects.php">Ver Proyectos</a>
+                            <a class="light-btn" href="contact-light.php">Cotizar ahora</a>
                         </div>
+                    </div>
+                    <div class="col-md-1 rotate follow">
+                        <a href="https://www.instagram.com/">Síguenos</a>
+                        <span class="follow-line"></span>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item" style="background-image: url(assets/images/abatilia/ima4.jpg);">
-                <div class="container pt-64 pb-64">
-                    <p class="text-white category-line category-hero">PROYECTOS B2B</p>
-                    <h1 class="col-lg-10 text-white">Manufactura moderna para cocinas, closets y baños</h1>
-                    <div class="row pt-32">
-                        <div class="carousel-buttons col-6">
-                            <button class="prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                            </button>
-                            <button class="" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                            </button>
+        </div>
+        <div class="hero-2-item justify-content-center py-96" style="background-image: url(assets/images/abatilia/ima4.jpg);">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-center pb-96">
+                    <div class="col-md-1 rotate phone">
+                        <div class="d-flex">
+                            <i class="fa fa-phone"></i>
+                            <div>
+                                <p class="phone-title">Atención comercial</p>
+                                <a class="number" href="tel:+528118188113">(+52) 81 1818 8113</a>
+                            </div>
                         </div>
-                        <div class="small-img col-6">
-                            <a href="project-details-light.php">
-                                <img class="hero-img wow zoomIn" src="assets/images/abatilia/ima2.png" alt="hero image" title="hero image">
-                            </a>
+                    </div>
+                    <div class="col-md-10 text-center">
+                        <h1 class="text-white">Manufactura moderna para cocinas,<br> closets y baños de alto nivel</h1>
+                        <div class="buttons mt-96">
+                            <a class="theme-btn" href="projects.php">Ver Proyectos</a>
+                            <a class="light-btn" href="contact-light.php">Cotizar ahora</a>
                         </div>
+                    </div>
+                    <div class="col-md-1 rotate follow">
+                        <a href="https://www.instagram.com/">Síguenos</a>
+                        <span class="follow-line"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-2-item justify-content-center py-96" style="background-image: url(assets/images/abatilia/gallery-closet.jpg);">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-center pb-96">
+                    <div class="col-md-1 rotate phone">
+                        <div class="d-flex">
+                            <i class="fa fa-phone"></i>
+                            <div>
+                                <p class="phone-title">Atención comercial</p>
+                                <a class="number" href="tel:+528118188113">(+52) 81 1818 8113</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10 text-center">
+                        <h1 class="text-white">Escalabilidad, control de calidad<br> y entregas por fases</h1>
+                        <div class="buttons mt-96">
+                            <a class="theme-btn" href="projects.php">Ver Proyectos</a>
+                            <a class="light-btn" href="contact-light.php">Cotizar ahora</a>
+                        </div>
+                    </div>
+                    <div class="col-md-1 rotate follow">
+                        <a href="https://www.instagram.com/">Síguenos</a>
+                        <span class="follow-line"></span>
                     </div>
                 </div>
             </div>
@@ -71,93 +108,140 @@ include './layout/layoutTop.php' ?>
 <!-- Hero Section End -->
 
 <!-- About Area start -->
-<section class="about-area py-128 black-100-bg">
+<section class="about-area-2 py-128 black-100-bg">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-sm-12 content pt-40">
-                <div class="big-text category-line">¿POR QUÉ ABITALIA?</div>
-                <div class="row pt-32">
-                    <h2 class="col-md-6">Un proveedor B2B que cumple tiempos, calidad y escala</h2>
-                </div>
-                <div class="row pt-96 pb-64">
-                    <p class="col-md-6 col-lg-3 text">Diseñamos y fabricamos mobiliario integral con foco en ejecución real de obra: menos fricción, mejor control y una experiencia premium para desarrolladoras, constructoras e interioristas en todo México.</p>
-                    <img class="small-image col-md-6 col-lg-5 wow zoomIn" src="assets/images/abatilia/gallery-closet.jpg" alt="about image" title="about image">
+        <div class="d-flex section-heading mb-64">
+            <div class="section-title">
+                <p class="category-line">¿POR QUÉ ABITALIA?</p>
+                <h1 class="wow fadeInUp delay-0-2s">Un proveedor B2B que cumple tiempos, calidad y escala</h1>
+            </div>
+        </div>
+        <div class="row mb-64">
+            <img src="assets/images/abatilia/gallery-bano.jpeg" alt="about image">
+        </div>
+        <div class="row gap-64">
+            <div class="col-md-12 col-lg-6">
+                <div class="counter-wrap">
+                    <div class="row gap-64">
+                        <div class="mobile-mr col-sm-4">
+                            <div class="counter-text-wrap wow fadeInUp delay-0-2s">
+                                <div class="d-flex">
+                                    <h3 class="count-text mb-32" data-speed="3000" data-stop="250">0</h3><span class="h3">+</span>
+                                </div>
+                                <h6 class="counter-title">Proyectos Atendidos</h6>
+                            </div>
+                        </div>
+                        <div class="mobile-mr col-sm-4">
+                            <div class="counter-text-wrap wow fadeInUp delay-0-2s">
+                                <div class="d-flex">
+                                    <h3 class="count-text mb-32" data-speed="3000" data-stop="80">0</h3><span class="h3">%</span>
+                                </div>
+                                <h6 class="counter-title">Clientes Recurrentes</h6>
+                            </div>
+                        </div>
+                        <div class="mobile-mr col-sm-4">
+                            <div class="counter-text-wrap wow fadeInUp delay-0-2s">
+                                <div class="d-flex">
+                                    <h3 class="count-text mb-32" data-speed="3000" data-stop="32">0</h3><span class="h3">+</span>
+                                </div>
+                                <h6 class="counter-title">Ciudades Cubiertas</h6>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <img class="col-sm-12 col-md-6 right-image wow zoomIn" src="assets/images/abatilia/gallery-bano.jpeg" alt="about image" title="about image">
+            <div class="col-md-12 col-lg-6 about2-content">
+                <div class="wow fadeInUp delay-0-4s mb-32">
+                    <ul class="tab-style-one nav nav-pills nav-fill mb-32 wow fadeInUp delay-0-4s">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#apart-tap1">Quiénes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#apart-tap2">Cómo Trabajamos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#apart-tap3">Compromiso</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="apart-tap1">
+                            <p>Diseñamos y fabricamos mobiliario integral con foco en ejecución real de obra: menos fricción, mejor control y una experiencia premium para desarrolladoras, constructoras e interioristas en todo México.</p>
+                        </div>
+                        <div class="tab-pane fade" id="apart-tap2">
+                            <p>Operamos con procesos estandarizados, documentación por proyecto e implementación por etapas para mantener continuidad entre diseño, producción, logística e instalación.</p>
+                        </div>
+                        <div class="tab-pane fade" id="apart-tap3">
+                            <p>Garantizamos consistencia de acabados y cumplimiento de tiempos con trazabilidad de avances, comunicación comercial cercana y soporte técnico durante todo el proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <a class="theme-btn" href="contact-light.php">Cotiza tu proyecto</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 <!-- About Area end -->
 
 <!-- Service Section Start -->
-<section class="service-area black-120-bg py-128 justify-content-center">
+<section class="service-area-2 black-120-bg py-128">
     <div class="container">
         <div class="d-flex section-heading mb-96">
             <div class="section-title">
-                <h2 class="wow fadeInUp delay-0-2s">Fabricación pensada para proyectos <br>con precisión y consistencia </h2>
+                <h2 class="wow fadeInUp delay-0-2s">Services</h2>
             </div>
-            <div class="carousel-buttons buttons-vertical">
-                <button class="prev" type="button" data-bs-target="#servicerecipeCarousel" data-bs-slide="prev">
+            <div class="carousel-buttons">
+                <button class="prev" type="button" data-bs-target="#service2Carousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
                 </button>
-                <button class="" type="button" data-bs-target="#servicerecipeCarousel" data-bs-slide="next">
+                <button class="" type="button" data-bs-target="#service2Carousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
                 </button>
             </div>
         </div>
-        <div class="carousel slide" id="servicerecipeCarousel" data-bs-ride="carousel">
+        <div class="carousel slide" id="service2Carousel" data-bs-ride="carousel">
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 item service-act">
-                        <h5>01</h5>
+                    <div class="col-12 col-md-4 item">
+                        <div class="row align-items-center mb-64">
+                            <div class="text">
+                                <a href="project-details-light.php">
+                                    <h5>PROJECT INCEPTION</h5>
+                                </a>
+                                <p class="mt-16">Levantamiento técnico, definición de alcances y propuesta integral para proyectos B2B.</p>
+                            </div>
+                            <div class="giant-text one">01</div>
+                        </div>
                         <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="service image"></a>
-                        <div class="carousel-caption">
-                            <a href="project-details-light.php">
-                                <h6 class="text-black">PROCESOS ESTANDARIZADOS</h6>
-                            </a>
-                            <p class="mb-16">Producción estandarizada para mantener calidad constante y entregables claros en cada etapa del proyecto.</p>
-                            <a href="project-details-light.php"><span class="right-arrow text-black"><i class="fa fa-long-arrow-right"></i></span></a>
-                        </div>
                     </div>
                 </div>
-                <div class="carousel-item ">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 item service-act">
-                        <h5>02</h5>
+                <div class="carousel-item">
+                    <div class="col-12 col-md-4 item">
+                        <div class="row align-items-center mb-64">
+                            <div class="text">
+                                <a href="project-details-light.php">
+                                    <h5>DEVELOPMENT</h5>
+                                </a>
+                                <p class="mt-16">Documentación de especificaciones, planos y coordinación de producción por fases.</p>
+                            </div>
+                            <div class="giant-text">02</div>
+                        </div>
                         <a href="project-details-light.php"><img src="assets/images/abatilia/ima2.png" alt="service image"></a>
-                        <div class="carousel-caption">
-                            <a href="project-details-light.php">
-                                <h6 class="text-black">DOCUMENTACIÓN POR PROYECTO</h6>
-                            </a>
-                            <p class="mb-16">Producción estandarizada para mantener calidad constante y entregables claros en cada etapa del proyecto.</p>
-                            <a href="project-details-light.php"><span class="text-black right-arrow"><i class="fa fa-long-arrow-right"></i></span></a>
-                        </div>
                     </div>
                 </div>
-                <div class="carousel-item ">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 item service-act">
-                        <h5>03</h5>
-                        <a href="project-details-light.php"><img src="assets/images/abatilia/ima3.webp" alt="service image"></a>
-                        <div class="carousel-caption">
-                            <a href="project-details-light.php">
-                                <h6 class="text-black">ESCALABILIDAD NACIONAL</h6>
-                            </a>
-                            <p class="mb-16">Producción estandarizada para mantener calidad constante y entregables claros en cada etapa del proyecto.</p>
-                            <a href="project-details-light.php"><span class="text-black right-arrow"><i class="fa fa-long-arrow-right"></i></span></a>
+                <div class="carousel-item">
+                    <div class="col-12 col-md-4 item">
+                        <div class="row align-items-center mb-64">
+                            <div class="text">
+                                <a href="project-details-light.php">
+                                    <h5>IMPLEMENTATION</h5>
+                                </a>
+                                <p class="mt-16">Fabricación, logística e instalación con control de calidad y seguimiento post-entrega.</p>
+                            </div>
+                            <div class="giant-text">03</div>
                         </div>
-                    </div>
-                </div>
-                <div class="carousel-item ">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 item service-act">
-                        <h5>04</h5>
                         <a href="project-details-light.php"><img src="assets/images/abatilia/ima4.jpg" alt="service image"></a>
-                        <div class="carousel-caption">
-                            <a href="project-details-light.php">
-                                <h6 class="text-black">IMPLEMENTACIÓN POR ETAPAS</h6>
-                            </a>
-                            <p class="mb-16">Producción estandarizada para mantener calidad constante y entregables claros en cada etapa del proyecto.</p>
-                            <a href="project-details-light.php"><span class="text-black right-arrow"><i class="fa fa-long-arrow-right"></i></span></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -762,81 +846,84 @@ include './layout/layoutTop.php' ?>
 </section>
 <!-- CTA Area end -->
 
-<!-- Blog Area start -->
-<section class="blog-area blog-home py-128 black-100-bg">
+<!-- FAQ Area start -->
+<section class="faq-area py-128 black-100-bg">
     <div class="container">
-        <div class="row section-heading mb-96">
-            <div class="section-title col-sm-7 col-lg-7">
-                <h2 class="wow fadeInUp delay-0-2s">Preguntas Frecuentes</h2>
-            </div>
-            <div class="button col-sm-5 col-lg-5">
-                <a class="theme-btn" href="projects.php">Ver más</a>
-            </div>
+        <div class="section-title mb-96">
+            <p class="category-line">FAQ</p>
+            <h2 class="wow fadeInUp delay-0-2s">Frequently Asked Questions</h2>
         </div>
-        <div class="row">
-            <div class="col-md-4 item">
-                <div class="blog-item wow fadeInUp delay-0-2s black-120-bg ">
-                    <div class="content ">
-                        <h6><a href="project-details-light.php">¿Abitalia se adapta a mi presupuesto?</a></h6>
-                        <div class="image">
-                            <img src="assets/images/abatilia/icon-clock.png" alt="Blog">
-                            <a class="hover-btn" href="project-details-light.php">Ver más</a>
+        <div class="row align-items-center">
+            <div class=" col-lg-6 faq">
+                <div class="accordion" id="accordionFaq">
+                    <div class="accordion-item">
+                        <h5 class="accordion-header" id="heading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                ¿Qué debo preparar antes de cotizar un proyecto con Abitalia?
+                            </button>
+                        </h5>
+                        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionFaq">
+                            <div class="accordion-body">
+                                Comparte tipología, volumen estimado, ubicación y calendario objetivo. Con esta base podemos proponer alcances, acabados y una ruta de ejecución por etapas.
+                            </div>
                         </div>
-                        <ul class="blog-meta mb-16">
-                            <li>
-                                <i class="fal fa-calendar-alt"></i> 20 Abril 2026
-                            </li>
-                            <li>
-                                <i class="fal fa-comment-dots"></i> Respuesta rápida
-                            </li>
-                        </ul>
-                        <p>Sí. Nos adaptamos al alcance con materiales, acabados y planeación por fases para proyectos B2B.</p>
+                    </div>
+                    <div class="accordion-item">
+                        <h5 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                ¿En qué momento conviene integrar a Abitalia al proyecto?
+                            </button>
+                        </h5>
+                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionFaq">
+                            <div class="accordion-body">
+                                Desde la etapa de planeación. Involucrarnos temprano mejora la coordinación con arquitectura y obra, reduce ajustes tardíos y brinda mayor control sobre tiempos y costos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h5 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                ¿Cuánto tiempo tarda la fabricación e instalación?
+                            </button>
+                        </h5>
+                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionFaq">
+                            <div class="accordion-body">
+                                Depende del volumen y del nivel de personalización. Definimos tiempos por frente de trabajo y entregas parciales para mantener el avance de obra sin detener otras partidas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h5 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                ¿Abitalia opera fuera de Monterrey?
+                            </button>
+                        </h5>
+                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionFaq">
+                            <div class="accordion-body">
+                                Sí. Atendemos proyectos en distintas ciudades de México con logística coordinada y supervisión para asegurar consistencia de calidad en cada entrega.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h5 class="accordion-header" id="heading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                ¿Se pueden ajustar materiales o especificaciones según presupuesto?
+                            </button>
+                        </h5>
+                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionFaq">
+                            <div class="accordion-body">
+                                Sí. Proponemos alternativas técnicas y de acabado para equilibrar diseño, desempeño y costo sin comprometer la intención estética del proyecto.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 item">
-                <div class="blog-item wow fadeInUp delay-0-2s black-120-bg ">
-                    <div class="content ">
-                        <h6><a href="project-details-light.php">¿Fabrican soluciones además de cocinas?</a></h6>
-                        <div class="image">
-                            <img src="assets/images/abatilia/icon-axis.png" alt="Blog">
-                            <a class="hover-btn" href="project-details-light.php">Ver más</a>
-                        </div>
-                        <ul class="blog-meta mb-16">
-                            <li>
-                                <i class="fal fa-calendar-alt"></i> 20 Abril 2026
-                            </li>
-                            <li>
-                                <i class="fal fa-comment-dots"></i> Respuesta rápida
-                            </li>
-                        </ul>
-                        <p>Sí. Nos adaptamos al alcance con materiales, acabados y planeación por fases para proyectos B2B.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 item">
-                <div class="blog-item wow fadeInUp delay-0-2s black-120-bg ">
-                    <div class="content ">
-                        <h6><a href="project-details-light.php">¿Puedo llevar un diseño / render?</a></h6>
-                        <div class="image">
-                            <img src="assets/images/abatilia/icon-kitchen.png" alt="Blog">
-                            <a class="hover-btn" href="project-details-light.php">Ver más</a>
-                        </div>
-                        <ul class="blog-meta mb-16">
-                            <li>
-                                <i class="fal fa-calendar-alt"></i> 20 Abril 2026
-                            </li>
-                            <li>
-                                <i class="fal fa-comment-dots"></i> Respuesta rápida
-                            </li>
-                        </ul>
-                        <p>Sí. Nos adaptamos al alcance con materiales, acabados y planeación por fases para proyectos B2B.</p>
-                    </div>
-                </div>
+            <div class="col-lg-6 image">
+                <img src="assets/images/abatilia/gallery-closet.jpg" alt="faq">
             </div>
         </div>
     </div>
 </section>
-<!-- Blog Area end -->
+<!-- FAQ Area end -->
 
 <?php include './layout/layoutBottom.php' ?>

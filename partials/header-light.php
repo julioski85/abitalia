@@ -6,7 +6,7 @@
             <div class="header-inner rel d-flex align-items-center">
                 <div class="logo-outer">
                     <?php $lightLogo = isset($customLightLogo) ? $customLightLogo : "assets/images/abatilia/logo (3) negro.png"; ?>
-                   <div class="logo"><a href="index-light.php#inicio"><img src="<?php echo $lightLogo; ?>" alt="Logo" title="Logo"></a></div>
+                    <div class="logo"><a href="index-light.php#inicio"><img src="<?php echo $lightLogo; ?>" alt="Logo" title="Logo"></a></div>
                 </div>
 
                 <div class="nav-outer ms-auto clearfix">
@@ -37,7 +37,7 @@
                                 <li><a href="#trabajos-recientes">Trabajos Recientes</a></li>
                                 <li><a href="#confianza">Confianza</a></li>
                                 <li><a href="#faq">FAQ</a></li>
-                                <li><a href="#contacto">Contacto</a></li>
+                                <li><a href="#" class="js-open-quote-modal" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar</a></li>
                             </ul>
                             <?php else: ?>
                             <ul class="navigation clearfix">
@@ -52,15 +52,12 @@
                     </nav>
                     <!-- Main Menu End-->
                 </div>
-                <!-- Search Button -->
-                <div class="search-btns">
-                    <span class="search-icon"><i class="far fa-search"></i></span>
+                <?php if ($isIndexLight): ?>
+                <div class="header-cta-wrap ms-24">
+                    <a href="#" class="theme-btn header-quote-btn js-open-quote-modal" data-bs-toggle="modal" data-bs-target="#quoteModal">Cotizar proyecto</a>
                 </div>
+                <?php endif; ?>
             </div>
-            <form class="search-project search-form mt-96" id="project-search" action="#">
-                <input type="search" required placeholder="Type to search...">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
         </div>
     </div>
     <!--End Header Upper-->

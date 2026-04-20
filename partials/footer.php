@@ -4,21 +4,38 @@
     <style>
         .minimal-footer-logo { max-height: 54px; width: auto; }
         .main-footer.black-120-bg { background: #f5f5f3; border-top: 1px solid #e6e1dd; }
-        .minimal-wise-badge {
-            width: 30px;
-            height: 30px;
+        .minimal-wise-signature {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            color: #111;
+        }
+        .minimal-wise-signature .minimal-wise-text {
+            font-size: 14px;
+            letter-spacing: 0.04em;
+        }
+        .minimal-wise-signature .minimal-wise-letter {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #111;
+            border-radius: 999px;
             font-size: 13px;
             line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
     <div class="container py-64">
         <div class="text-center">
-            <a href="index-light.php" class="d-inline-block mb-24">
+            <a href="index-light.php" class="d-inline-block mb-16">
                 <img src="https://abitalia.mkt-wise.com/5/assets/images/abatilia/logo%20(3)%20negro.png" alt="Abitalia logo" class="minimal-footer-logo">
             </a>
-            <div class="d-flex align-items-center justify-content-center gap-12 text-black">
-                <span class="fw-light">Hecho por Wise</span>
-                <span class="minimal-wise-badge d-inline-flex align-items-center justify-content-center rounded-circle border border-dark">W</span>
+            <div class="minimal-wise-signature">
+                <span class="minimal-wise-text">Hecho por Wise</span>
+                <span class="minimal-wise-letter">W</span>
             </div>
         </div>
     </div>

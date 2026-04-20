@@ -266,6 +266,10 @@ include './layout/layoutTop.php'
         transform: translate3d(0, 0, 0);
     }
 
+    #por-que-abitalia .about-media-video {
+        aspect-ratio: 32 / 9;
+    }
+
     @media (prefers-reduced-motion: reduce) {
         .abt-reveal {
             opacity: 1;
@@ -641,59 +645,43 @@ include './layout/layoutTop.php'
             <div class="section-title">
                 <h2>Servicios</h2>
             </div>
-            <div class="carousel-buttons">
-                <button class="prev" type="button" data-bs-target="#service2Carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <button class="" type="button" data-bs-target="#service2Carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
-            </div>
         </div>
-        <div class="carousel" id="service2Carousel" data-bs-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="col-12 col-md-4 item">
-                        <div class="row align-items-center mb-64">
-                            <div class="text">
-                                <a href="project-details-light.php">
-                                    <h5>INICIO DEL PROYECTO</h5>
-                                </a>
-                                <p class="mt-16">Levantamiento técnico, definición de alcances y propuesta integral para proyectos B2B.</p>
-                            </div>
-                            <div class="giant-text one">01</div>
-                        </div>
-                        <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="imagen del servicio"></a>
+        <div class="row gy-5">
+            <div class="col-12 col-md-4 item">
+                <div class="row align-items-center mb-64">
+                    <div class="text">
+                        <a href="project-details-light.php">
+                            <h5>INICIO DEL PROYECTO</h5>
+                        </a>
+                        <p class="mt-16">Levantamiento técnico y definición de alcance para iniciar sin fricción.</p>
                     </div>
+                    <div class="giant-text one">01</div>
                 </div>
-                <div class="carousel-item">
-                    <div class="col-12 col-md-4 item">
-                        <div class="row align-items-center mb-64">
-                            <div class="text">
-                                <a href="project-details-light.php">
-                                    <h5>DESARROLLO</h5>
-                                </a>
-                                <p class="mt-16">Documentación de especificaciones, planos y coordinación de producción por fases.</p>
-                            </div>
-                            <div class="giant-text">02</div>
-                        </div>
-                        <a href="project-details-light.php"><img src="assets/images/abatilia/ima2.png" alt="imagen del servicio"></a>
+                <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="imagen del servicio"></a>
+            </div>
+            <div class="col-12 col-md-4 item">
+                <div class="row align-items-center mb-64">
+                    <div class="text">
+                        <a href="project-details-light.php">
+                            <h5>DESARROLLO</h5>
+                        </a>
+                        <p class="mt-16">Planos y especificaciones claras con coordinación por fases.</p>
                     </div>
+                    <div class="giant-text">02</div>
                 </div>
-                <div class="carousel-item">
-                    <div class="col-12 col-md-4 item">
-                        <div class="row align-items-center mb-64">
-                            <div class="text">
-                                <a href="project-details-light.php">
-                                    <h5>IMPLEMENTACIÓN</h5>
-                                </a>
-                                <p class="mt-16">Fabricación, logística e instalación con control de calidad y seguimiento post-entrega.</p>
-                            </div>
-                            <div class="giant-text">03</div>
-                        </div>
-                        <a href="project-details-light.php"><img src="assets/images/abatilia/ima4.jpg" alt="imagen del servicio"></a>
+                <a href="project-details-light.php"><img src="assets/images/abatilia/ima2.png" alt="imagen del servicio"></a>
+            </div>
+            <div class="col-12 col-md-4 item">
+                <div class="row align-items-center mb-64">
+                    <div class="text">
+                        <a href="project-details-light.php">
+                            <h5>IMPLEMENTACIÓN</h5>
+                        </a>
+                        <p class="mt-16">Fabricación, logística e instalación con control de calidad en sitio.</p>
                     </div>
+                    <div class="giant-text">03</div>
                 </div>
+                <a href="project-details-light.php"><img src="assets/images/abatilia/ima4.jpg" alt="imagen del servicio"></a>
             </div>
         </div>
     </div>
@@ -818,7 +806,7 @@ include './layout/layoutTop.php'
                                 <span class="h4 title">1. SOLICITUD</span>
                                 <span class="arrow-icon"></span>
                             </div>
-                            <p class="description">Recibimos tu solicitud con datos básicos y alcance. Definimos objetivos de fabricación para cocinas, closets y baños alineados al calendario de obra.</p>
+                            <p class="description">Recibimos alcance, volumen y fechas clave para alinear el proyecto desde el inicio.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -828,37 +816,27 @@ include './layout/layoutTop.php'
                                 <span class="h4 title">2. VALIDACIÓN</span>
                                 <span class="arrow-icon"></span>
                             </div>
-                            <p class="description">Validamos requerimientos: acabados, volumen y tiempos estimados. Documentamos cada frente para reducir retrabajos y mejorar coordinación.</p>
+                            <p class="description">Validamos requerimientos y acabados; documentamos frentes para evitar retrabajos.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="icon"></div>
                         <div class="content">
                             <div class="wprocess-title">
-                                <span class="h4 title">3. PROPUESTA</span>
+                                <span class="h4 title">3. PRODUCCIÓN</span>
                                 <span class="arrow-icon"></span>
                             </div>
-                            <p class="description">Enviamos propuesta integral con especificaciones claras. Ajustamos tipologías y detalles para conservar consistencia premium en todo el proyecto.</p>
+                            <p class="description">Entramos a manufactura con control de calidad y seguimiento de avance por fase.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="icon"></div>
                         <div class="content">
                             <div class="wprocess-title">
-                                <span class="h4 title">4. PRODUCCIÓN</span>
+                                <span class="h4 title">4. ENTREGA</span>
                                 <span class="arrow-icon"></span>
                             </div>
-                            <p class="description">Entramos a producción con manufactura moderna y control de calidad. Aseguramos precisión, ritmo y visibilidad de avance por fase.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="icon"></div>
-                        <div class="content">
-                            <div class="wprocess-title">
-                                <span class="h4 title">5. ENTREGA</span>
-                                <span class="arrow-icon"></span>
-                            </div>
-                            <p class="description">Coordinamos entregas e instalación por etapas. Cerramos con evaluación final para garantizar cumplimiento en tiempo, calidad y escala.</p>
+                            <p class="description">Coordinamos entrega e instalación por etapas para cerrar en tiempo y calidad.</p>
                         </div>
                     </div>
                 </div>
@@ -1088,7 +1066,7 @@ include './layout/layoutTop.php'
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const revealTargets = document.querySelectorAll(
-        'section h1, section h2, section h3, section h4, section h5, section p, section li, section .card, section .counter-text-wrap, section .accordion-item, section .button, section .buttons, section img, section .carousel, section .timeline-item'
+        'section:not(#servicios) h1, section:not(#servicios) h2, section:not(#servicios) h3, section:not(#servicios) h4, section:not(#servicios) h5, section:not(#servicios) p, section:not(#servicios) li, section:not(#servicios) .card, section:not(#servicios) .counter-text-wrap, section:not(#servicios) .accordion-item, section:not(#servicios) .button, section:not(#servicios) .buttons, section:not(#servicios) img, section:not(#servicios) .carousel, section:not(#servicios) .timeline-item'
     );
 
     revealTargets.forEach(function (element, index) {

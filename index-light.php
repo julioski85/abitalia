@@ -521,7 +521,7 @@ include './layout/layoutTop.php'
             </div>
         </div>
         <div class="row mb-64 about-media">
-            <img src="assets/images/abatilia/gallery-bano.jpeg" alt="about image">
+            <img src="assets/images/abatilia/gallery-bano.jpeg" alt="imagen sobre Abitalia">
         </div>
         <div class="row gap-64">
             <div class="col-md-12 col-lg-6">
@@ -611,13 +611,13 @@ include './layout/layoutTop.php'
                         <div class="row align-items-center mb-64">
                             <div class="text">
                                 <a href="project-details-light.php">
-                                    <h5>PROJECT INCEPTION</h5>
+                                    <h5>INICIO DEL PROYECTO</h5>
                                 </a>
                                 <p class="mt-16">Levantamiento técnico, definición de alcances y propuesta integral para proyectos B2B.</p>
                             </div>
                             <div class="giant-text one">01</div>
                         </div>
-                        <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="service image"></a>
+                        <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="imagen del servicio"></a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -625,13 +625,13 @@ include './layout/layoutTop.php'
                         <div class="row align-items-center mb-64">
                             <div class="text">
                                 <a href="project-details-light.php">
-                                    <h5>DEVELOPMENT</h5>
+                                    <h5>DESARROLLO</h5>
                                 </a>
                                 <p class="mt-16">Documentación de especificaciones, planos y coordinación de producción por fases.</p>
                             </div>
                             <div class="giant-text">02</div>
                         </div>
-                        <a href="project-details-light.php"><img src="assets/images/abatilia/ima2.png" alt="service image"></a>
+                        <a href="project-details-light.php"><img src="assets/images/abatilia/ima2.png" alt="imagen del servicio"></a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -639,13 +639,13 @@ include './layout/layoutTop.php'
                         <div class="row align-items-center mb-64">
                             <div class="text">
                                 <a href="project-details-light.php">
-                                    <h5>IMPLEMENTATION</h5>
+                                    <h5>IMPLEMENTACIÓN</h5>
                                 </a>
                                 <p class="mt-16">Fabricación, logística e instalación con control de calidad y seguimiento post-entrega.</p>
                             </div>
                             <div class="giant-text">03</div>
                         </div>
-                        <a href="project-details-light.php"><img src="assets/images/abatilia/ima4.jpg" alt="service image"></a>
+                        <a href="project-details-light.php"><img src="assets/images/abatilia/ima4.jpg" alt="imagen del servicio"></a>
                     </div>
                 </div>
             </div>
@@ -654,379 +654,93 @@ include './layout/layoutTop.php'
 </section>
 <!-- Services Section End -->
 
-<!-- Home Projects Area start -->
-<section id="trabajos-recientes" class="homeproject-area py-128">
+<!-- Home 3 Projects Area start -->
+<section id="trabajos-recientes" class="home3project py-128 black-120-bg">
     <div class="container">
         <div class="row rel z-1 justify-content-center">
             <div class="section-title text-center mb-96 wow fadeInUp delay-0-2s">
-                <span class="sub-title mb-16">PROJECTS</span>
-                <h2>Latest Works</h2>
-            </div>
-        </div>
-        <ul class="project-filter tab-style-one justify-content-center nav nav-pills nav-fill mb-96 wow fadeInUp delay-0-4s">
-            <li data-filter="*" class="nav-item current">
-                <a class="nav-link">TODO</a>
-            </li>
-            <li class="nav-item" data-filter=".COCINAS">
-                <a class="nav-link">COCINAS</a>
-            </li>
-            <li class="nav-item" data-filter=".CLOSETS">
-                <a class="nav-link">CLOSETS</a>
-            </li>
-            <li class="nav-item" data-filter=".BAÑOS">
-                <a class="nav-link">BAÑOS</a>
-            </li>
-            <li class="nav-item" data-filter=".PROYECTOS">
-                <a class="nav-link">PROYECTOS</a>
-            </li>
-        </ul>
-        <div class="row gap-128 project-active">
-            <div class="col-xl-6 col-md-6 item COCINAS">
-                <div class="row apartment-image wow fadeInLeft delay-0-1s">
-                    <a href="project-details-light.php"><img src="assets/images/abatilia/gallery-closet.jpg" alt="Apartment"></a>
-                </div>
-                <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
-                    <div class="pro-title text-center">
-                        <a href="project-details-light.php">
-                            <h4 class="text-black">COCINA CONTEMPORÁNEA</h4>
-                        </a>
-                        <span class="category">COCINAS</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-6 item CLOSETS">
-                <div class="row apartment-image wow fadeInLeft delay-0-1s">
-                    <a href="project-details-light.php"><img src="assets/images/abatilia/gallery-bano.jpeg" alt="Apartment"></a>
-                </div>
-                <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
-                    <div class="pro-title text-center">
-                        <a href="project-details-light.php">
-                            <h4 class="text-black">CLOSETS PREMIUM</h4>
-                        </a>
-                        <span class="category">CLOSETS</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-6 item BAÑOS">
-                <div class="row apartment-image wow fadeInLeft delay-0-1s">
-                    <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="Apartment"></a>
-                </div>
-                <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
-                    <div class="pro-title text-center">
-                        <a href="project-details-light.php">
-                            <h4 class="text-black">BAÑOS INTEGRALES</h4>
-                        </a>
-                        <span class="category">BAÑOS</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-6 item PROYECTOS">
-                <div class="row apartment-image wow fadeInLeft delay-0-1s">
-                    <a href="project-details-light.php"><img src="assets/images/abatilia/ima2.png" alt="Apartment"></a>
-                </div>
-                <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
-                    <div class="pro-title text-center">
-                        <a href="project-details-light.php">
-                            <h4 class="text-black">IMPLEMENTACIÓN POR ETAPAS</h4>
-                        </a>
-                        <span class="category">PROYECTOS</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-6 item CLOSETS">
-                <div class="row apartment-image wow fadeInLeft delay-0-1s">
-                    <a href="project-details-light.php"><img src="assets/images/abatilia/ima3.webp" alt="Apartment"></a>
-                </div>
-                <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
-                    <div class="pro-title text-center">
-                        <a href="project-details-light.php">
-                            <h4 class="text-black">DETALLE PREMIUM</h4>
-                        </a>
-                        <span class="category">CLOSETS</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-md-6 item COCINAS">
-                <div class="row apartment-image wow fadeInLeft delay-0-1s">
-                    <a href="project-details-light.php"><img src="assets/images/abatilia/hero.jpeg" alt="Apartment"></a>
-                </div>
-                <div class="row apartment-content wow fadeInRight delay-0-1s rp-0">
-                    <div class="pro-title text-center">
-                        <a href="project-details-light.php">
-                            <h4 class="text-black">OPERACIÓN B2B</h4>
-                        </a>
-                        <span class="category">COCINAS</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 text-center">
-            <a class="loadmore primary-readmore" href="projects.php">Ver Trabajos</a>
-        </div>
-    </div>
-</section>
-<!-- Home Projects Area end -->
-
-<!-- Interior Projects Section Start -->
-<section class="interior-area slider-horizontal black-120-bg py-128 justify-content-center">
-    <div class="container-fluid">
-        <div class="container rel z-1 justify-content-center text-center">
-            <div class="text-center mb-96 wow fadeInUp delay-0-2s">
-                <span class="sub-title mb-16">PROJECTS</span>
-                <h2>Latest Works</h2>
-            </div>
-        </div>
-        <div class="container section-heading">
-            <div class="nav-fill-left">
-                <ul class="tab-style-one nav interior-nav nav-pills nav-fill mb-96 wow fadeInUp delay-0-4s">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-bs-toggle="tab" href="#inter-tap1">TODO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#inter-tap2">COCINA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#inter-tap3">CLOSET</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#inter-tap4">BAÑO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#inter-tap5">B2B</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="tab-content">
-            <div class="tab-pane fade show active" id="inter-tap1">
-                <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel1" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <div class="carousel slide interior-nav" id="interiorrecipeCarousel1" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img class="zoomIn" src="assets/images/abatilia/hero.jpeg" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">OPERACIÓN</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Operación B2B</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">COORDINACIÓN</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Control por fases</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img src="assets/images/abatilia/ima2.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">ACABADOS</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Acabados Premium</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="next" type="button" data-bs-target="#interiorrecipeCarousel1" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
-            </div>
-            <div class="tab-pane fade show" id="inter-tap2">
-                <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel2" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <div class="carousel slide interior-nav" id="interiorrecipeCarousel2" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img class="zoomIn" src="assets/images/abatilia/gallery-closet.jpg" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">OPERACIÓN</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Operación B2B</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">COORDINACIÓN</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Control por fases</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img src="assets/images/abatilia/ima2.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">ACABADOS</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Acabados Premium</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="next" type="button" data-bs-target="#interiorrecipeCarousel2" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
-            </div>
-            <div class="tab-pane fade show" id="inter-tap3">
-                <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel3" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <div class="carousel slide interior-nav" id="interiorrecipeCarousel3" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img class="zoomIn" src="assets/images/abatilia/ima3.webp" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">OPERACIÓN</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Operación B2B</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">COORDINACIÓN</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Control por fases</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img src="assets/images/abatilia/ima2.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">ACABADOS</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Acabados Premium</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="next" type="button" data-bs-target="#interiorrecipeCarousel3" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
-            </div>
-            <div class="tab-pane fade show" id="inter-tap4">
-                <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel4" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <div class="carousel slide interior-nav" id="interiorrecipeCarousel4" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img class="zoomIn" src="assets/images/abatilia/gallery-bano.jpeg" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">OPERACIÓN</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Operación B2B</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">COORDINACIÓN</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Control por fases</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img src="assets/images/abatilia/ima2.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">ACABADOS</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Acabados Premium</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="next" type="button" data-bs-target="#interiorrecipeCarousel4" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
-            </div>
-            <div class="tab-pane fade show" id="inter-tap5">
-                <button class="prev" type="button" data-bs-target="#interiorrecipeCarousel5" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                </button>
-                <div class="carousel slide interior-nav" id="interiorrecipeCarousel5" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img class="zoomIn" src="assets/images/abatilia/ima3.webp" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">OPERACIÓN</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Operación B2B</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img src="assets/images/abatilia/ima1.png" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">COORDINACIÓN</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Control por fases</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" carousel-item">
-                            <div class="col-lg-6 interior-act">
-                                <a href="project-details-light.php"><img src="assets/images/abatilia/gallery-closet.jpg" alt="project image"></a>
-                                <div class="carousel-caption">
-                                    <span class="sub-title mb-16">ACABADOS</span>
-                                    <a href="project-details-light.php">
-                                        <h4 class="text-black">Acabados Premium</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="next" type="button" data-bs-target="#interiorrecipeCarousel5" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                </button>
+                <span class="sub-title mb-16">PROYECTOS</span>
+                <h2>Trabajos recientes</h2>
             </div>
         </div>
     </div>
+    <div class="container-fluid pl-96 pr-96">
+        <div class="pro-items">
+            <div class="card">
+                <div class="row wow fadeInLeft delay-0-1s">
+                    <a href="project-details-light.php"><img src="assets/images/architecture-projects/hpr4.jpg" alt="Proyecto residencial"></a>
+                </div>
+                <div class="project-home3-content">
+                    <a href="project-details-light.php">
+                        <h4>Diseño de villa</h4>
+                    </a>
+                    <p class="category-line">ARQUITECTURA</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row wow fadeInLeft delay-0-1s">
+                    <a href="project-details-light.php"><img src="assets/images/architecture-projects/hpr2-1.png" alt="Proyecto de interior"></a>
+                </div>
+                <div class="project-home3-content">
+                    <a href="project-details-light.php">
+                        <h4>Casa moderna</h4>
+                    </a>
+                    <p class="category-line">INTERIORISMO</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row wow fadeInLeft delay-0-1s">
+                    <a href="project-details-light.php"><img src="assets/images/architecture-projects/hpr2-4.jpg" alt="Proyecto en montaña"></a>
+                </div>
+                <div class="project-home3-content">
+                    <a href="project-details-light.php">
+                        <h4>Casa de montaña</h4>
+                    </a>
+                    <p class="category-line">PAISAJISMO</p>
+                </div>
+            </div>
+        </div>
+        <div class="pro-items mt-96">
+            <div class="card">
+                <div class="row wow fadeInLeft delay-0-1s">
+                    <a href="project-details-light.php"><img src="assets/images/architecture-projects/hpr2-3.png" alt="Proyecto de renovación"></a>
+                </div>
+                <div class="project-home3-content">
+                    <a href="project-details-light.php">
+                        <h4>Renovación de vivienda</h4>
+                    </a>
+                    <p class="category-line">REMODELACIÓN</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row wow fadeInLeft delay-0-1s">
+                    <a href="project-details-light.php"><img src="assets/images/architecture-projects/hpr2-6.jpg" alt="Diseño de cocina"></a>
+                </div>
+                <div class="project-home3-content">
+                    <a href="project-details-light.php">
+                        <h4>Diseño de cocina</h4>
+                    </a>
+                    <p class="category-line">INTERIORISMO</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row wow fadeInLeft delay-0-1s">
+                    <a href="project-details-light.php"><img src="assets/images/architecture-projects/hpr2-5.png" alt="Diseño de casa"></a>
+                </div>
+                <div class="project-home3-content">
+                    <a href="project-details-light.php">
+                        <h4>Diseño de casa</h4>
+                    </a>
+                    <p class="category-line">ARQUITECTURA</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 text-center mt-128">
+            <a class="loadmore primary-readmore" href="projects.php">Ver proyectos</a>
+        </div>
+    </div>
 </section>
-<!-- Interior Projects Section End -->
+<!-- Home 3 Projects Area end -->
 
 <!-- Timeline Area start -->
 <section class="timeline-area py-128 black-110">
@@ -1042,11 +756,11 @@ include './layout/layoutTop.php'
         <div class="row gap-64 align-items-center">
             <div class=" col-md-12 col-lg-6">
                 <div class="timeline-images wow fadeInLeft delay-0-2s">
-                    <img src="assets/images/abatilia/ima1.png" alt="Timeline">
-                    <img src="assets/images/abatilia/ima2.png" alt="Timeline">
-                    <img src="assets/images/abatilia/ima3.webp" alt="Timeline">
-                    <img src="assets/images/abatilia/ima4.jpg" alt="Timeline">
-                    <img src="assets/images/abatilia/hero.jpeg" alt="Timeline">
+                    <img src="assets/images/abatilia/ima1.png" alt="línea de tiempo">
+                    <img src="assets/images/abatilia/ima2.png" alt="línea de tiempo">
+                    <img src="assets/images/abatilia/ima3.webp" alt="línea de tiempo">
+                    <img src="assets/images/abatilia/ima4.jpg" alt="línea de tiempo">
+                    <img src="assets/images/abatilia/hero.jpeg" alt="línea de tiempo">
                 </div>
             </div>
             <div class=" col-md-12 col-lg-6">
@@ -1164,7 +878,7 @@ include './layout/layoutTop.php'
                             </div>
                             <div class="h5 author-text mb-32">“Cumplieron el calendario de entrega por torre y la calidad se mantuvo pareja en todas las unidades.”</div>
                             <div class="d-flex">
-                                <img class="testi-img" src="assets/images/abatilia/logo.png" alt="review author image">
+                                <img class="testi-img" src="assets/images/abatilia/logo.png" alt="imagen del autor de la reseña">
                                 <div class="testi-author">
                                     <h5 class="text-white">Laura Méndez</h5>
                                     <p class="designations">Dirección de Proyecto · Monterrey</p>
@@ -1184,7 +898,7 @@ include './layout/layoutTop.php'
                             </div>
                             <div class="h5 author-text mb-32">“Tuvimos acompañamiento desde ingeniería hasta instalación final. Fue una experiencia ordenada y profesional.”</div>
                             <div class="d-flex">
-                                <img class="testi-img" src="assets/images/abatilia/logo.png" alt="review author image">
+                                <img class="testi-img" src="assets/images/abatilia/logo.png" alt="imagen del autor de la reseña">
                                 <div class="testi-author">
                                     <h5 class="text-white">Jorge Ramírez</h5>
                                     <p class="designations">Constructora Vertical · Guadalajara</p>
@@ -1204,7 +918,7 @@ include './layout/layoutTop.php'
                             </div>
                             <div class="h5 author-text mb-32">“Escalamos el pedido sin detener obra. La coordinación logística fue clave para cumplir fechas de escrituración.”</div>
                             <div class="d-flex">
-                                <img class="testi-img" src="assets/images/abatilia/logo.png" alt="review author image">
+                                <img class="testi-img" src="assets/images/abatilia/logo.png" alt="imagen del autor de la reseña">
                                 <div class="testi-author">
                                     <h5 class="text-white">Carla Morales</h5>
                                     <p class="designations">Desarrolladora Residencial · CDMX</p>
@@ -1225,7 +939,7 @@ include './layout/layoutTop.php'
 <section id="faq" class="faq-area py-128 black-100-bg">
     <div class="container">
         <div class="section-title mb-96">
-            <p class="category-line">FAQ</p>
+            <p class="category-line">PREGUNTAS FRECUENTES</p>
             <h2 class="wow fadeInUp delay-0-2s">Preguntas frecuentes</h2>
         </div>
         <div class="row align-items-center">
@@ -1306,7 +1020,7 @@ include './layout/layoutTop.php'
                         <input id="quote-name" type="text" required placeholder="Tu nombre">
                     </div>
                     <div class="field-group">
-                        <label for="quote-email">Email</label>
+                        <label for="quote-email">Correo electrónico</label>
                         <input id="quote-email" type="email" required placeholder="correo@empresa.com">
                     </div>
                     <div class="field-group">

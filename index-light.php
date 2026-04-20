@@ -699,12 +699,29 @@ include './layout/layoutTop.php'
 
         #por-que-abitalia .section-heading,
         #por-que-abitalia .section-title,
+        #por-que-abitalia .section-title .category-line,
         #por-que-abitalia .counter-text-wrap,
         #por-que-abitalia .counter-title,
         #por-que-abitalia .tab-style-one .nav-link,
         #por-que-abitalia .tab-content p,
-        #por-que-abitalia .button {
+        #por-que-abitalia .button,
+        #por-que-abitalia .about2-content {
             text-align: center !important;
+        }
+
+        #por-que-abitalia .section-title .category-line {
+            padding-left: 0;
+            display: inline-block;
+            width: 100%;
+        }
+
+        #por-que-abitalia .section-title .category-line::after {
+            content: none;
+        }
+
+        #por-que-abitalia .about2-content {
+            margin-left: auto;
+            margin-right: auto;
         }
 
         #por-que-abitalia .counter-text-wrap .d-flex {
@@ -713,11 +730,17 @@ include './layout/layoutTop.php'
 
         #por-que-abitalia .tab-style-one {
             gap: 8px;
+            justify-content: center;
+        }
+
+        #por-que-abitalia .tab-style-one .nav-item {
+            flex: 0 0 auto;
         }
 
         #por-que-abitalia .about-media-video {
             border-radius: 12px;
-            max-height: 66vh;
+            aspect-ratio: 16 / 9;
+            max-height: none;
         }
 
         #por-que-abitalia .about-media-video iframe {
@@ -772,7 +795,11 @@ include './layout/layoutTop.php'
         }
 
         .timeline-area .timeline-item {
-            margin-bottom: 14px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-area .timeline-item:not(:first-child) {
+            margin-top: 12px;
         }
 
         .timeline-area .timeline-item:last-child {
@@ -780,12 +807,38 @@ include './layout/layoutTop.php'
         }
 
         .timeline-area .timeline-item .content {
-            padding-top: 8px;
-            padding-bottom: 8px;
+            padding-top: 4px;
+            padding-bottom: 4px;
         }
 
         .timeline-area .timeline-item .description {
+            margin-top: 4px;
+        }
+
+        .timeline-area .section-heading {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .timeline-area .section-heading .section-title {
+            text-align: center;
+        }
+
+        .timeline-area .section-heading .button {
             margin-top: 8px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        #trabajos-recientes .mt-128 {
+            margin-top: 36px !important;
+        }
+    }
+
+    @media (max-width: 575px) {
+        #por-que-abitalia .about-media-video {
+            min-height: 210px;
         }
     }
 </style>

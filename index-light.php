@@ -646,6 +646,148 @@ include './layout/layoutTop.php'
             font-size: 28px;
         }
     }
+
+    @media (max-width: 767px) {
+        .hero-area-2 .hero-2-item {
+            min-height: 420px;
+            padding-top: 48px !important;
+            padding-bottom: 48px !important;
+        }
+
+        .hero-area-2 .hero-2-item .row {
+            padding-bottom: 0 !important;
+        }
+
+        .hero-area-2 .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 24px !important;
+        }
+
+        .hero-area-2 .buttons a {
+            margin: 0 !important;
+        }
+
+        .hero-area-2 .buttons .theme-btn,
+        .hero-area-2 .buttons .light-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 165px;
+            padding: 12px 16px;
+            text-align: center;
+        }
+
+        .buttons,
+        .button {
+            text-align: center;
+        }
+
+        .button .theme-btn,
+        .button .light-btn,
+        .loadmore,
+        .primary-readmore {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        #por-que-abitalia .section-heading,
+        #por-que-abitalia .section-title,
+        #por-que-abitalia .counter-text-wrap,
+        #por-que-abitalia .counter-title,
+        #por-que-abitalia .tab-style-one .nav-link,
+        #por-que-abitalia .tab-content p,
+        #por-que-abitalia .button {
+            text-align: center !important;
+        }
+
+        #por-que-abitalia .counter-text-wrap .d-flex {
+            justify-content: center;
+        }
+
+        #por-que-abitalia .tab-style-one {
+            gap: 8px;
+        }
+
+        #por-que-abitalia .about-media-video {
+            border-radius: 12px;
+            max-height: 66vh;
+        }
+
+        #por-que-abitalia .about-media-video iframe {
+            transform: none;
+            cursor: pointer;
+        }
+
+        .section-heading,
+        .section-title {
+            margin-bottom: 28px !important;
+        }
+
+        .section-title .category-line,
+        .section-title .sub-title {
+            margin-bottom: 8px !important;
+        }
+
+        .section-title h1,
+        .section-title h2,
+        .section-title h3 {
+            margin-bottom: 12px !important;
+        }
+
+        .py-128 {
+            padding-top: 72px !important;
+            padding-bottom: 72px !important;
+        }
+
+        .py-96 {
+            padding-top: 52px !important;
+            padding-bottom: 52px !important;
+        }
+
+        .mt-96 {
+            margin-top: 24px !important;
+        }
+
+        .mb-96 {
+            margin-bottom: 34px !important;
+        }
+
+        .mb-64 {
+            margin-bottom: 24px !important;
+        }
+
+        .mb-32 {
+            margin-bottom: 16px !important;
+        }
+
+        .gap-64 {
+            --bs-gutter-y: 1.25rem;
+        }
+
+        .timeline-area .timeline-item {
+            margin-bottom: 14px;
+        }
+
+        .timeline-area .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-area .timeline-item .content {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .timeline-area .timeline-item .description {
+            margin-top: 8px;
+        }
+    }
 </style>
 
 <!-- Hero Section Start -->
@@ -746,7 +888,7 @@ include './layout/layoutTop.php'
             <div class="about-media-video">
                 <iframe
                     id="abitaliaVideo"
-                    src="https://www.youtube.com/embed/hAwFTqJLbzI?autoplay=1&mute=1&loop=1&playlist=hAwFTqJLbzI&controls=0&modestbranding=1&rel=0&playsinline=1&enablejsapi=1&vq=hd1080"
+                    src="https://www.youtube.com/embed/hAwFTqJLbzI?autoplay=1&mute=1&loop=1&playlist=hAwFTqJLbzI&controls=1&modestbranding=1&rel=0&playsinline=1&enablejsapi=1&vq=hd1080"
                     title="Video sobre Abitalia"
                     allow="autoplay; encrypted-media; picture-in-picture"
                     referrerpolicy="strict-origin-when-cross-origin"
@@ -1286,6 +1428,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (typeof event.target.setPlaybackQualityRange === 'function') {
                         event.target.setPlaybackQualityRange('highres');
                     }
+                    if (typeof event.target.playVideo === 'function') {
+                        event.target.playVideo();
+                    }
                 }
             }
         });
@@ -1300,6 +1445,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.onYouTubeIframeAPIReady = forceBestVideoQuality;
+    var aboutVideoWrap = document.querySelector('#por-que-abitalia .about-media-video');
+    var aboutVideoFrame = document.getElementById('abitaliaVideo');
+
+    if (aboutVideoWrap && aboutVideoFrame) {
+        aboutVideoWrap.addEventListener('click', function () {
+            aboutVideoFrame.contentWindow.postMessage(
+                '{"event":"command","func":"playVideo","args":""}',
+                '*'
+            );
+        });
+    }
+
     const revealTargets = document.querySelectorAll(
         'section:not(#servicios) h1, section:not(#servicios) h2, section:not(#servicios) h3, section:not(#servicios) h4, section:not(#servicios) h5, section:not(#servicios) p, section:not(#servicios) li, section:not(#servicios) .card, section:not(#servicios) .counter-text-wrap, section:not(#servicios) .accordion-item, section:not(#servicios) .button, section:not(#servicios) .buttons, section:not(#servicios) img, section:not(#servicios) .carousel, section:not(#servicios) .timeline-item'
     );

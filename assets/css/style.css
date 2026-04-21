@@ -4131,10 +4131,6 @@ button.read-more{
   .timeline-item .content{
     margin-left: 55px;
   }
-  .timeline-item .description{
-    height: 200px!important;
-    overflow-y: scroll;
-  }
   .wprocess-title .arrow-icon::after{
     transform: unset;
   }
